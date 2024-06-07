@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ContactFragment" >
+
+    <!-- Creating linearlayout to align item in vertical order -->
+    <LinearLayout
+        android:id="@+id/llForm"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#1aaa"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        android:gravity="center">
+
+        <!-- Heading h1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact"
+            android:fontFamily="@font/manrope_bold"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="#212121"/>
+
+        <!-- Heading h2 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20sp"
+            android:text="How can we help you?"
+            android:fontFamily="@font/manrope_regular"
+            android:textColor="#212121"/>
+
+        <!-- Customer Name -->
+        <EditText
+            android:id="@+id/contactname_text"
+            android:layout_width="240dp"
+            android:layout_height="48dp"
+            android:textAlignment="center"
+            android:hint="Customer Name"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_regular"
+            android:layout_margin="25dp"
+            android:background="@drawable/custom_contact_editview"/>
+
+        <!-- Customer Address -->
+        <EditText
+            android:id="@+id/contactaddress_text"
+            android:layout_width="240dp"
+            android:layout_height="48dp"
+            android:textAlignment="center"
+            android:hint="Customer Address"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_regular"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_contact_editview" />
+
+        <!-- Job -->
+        <EditText
+            android:id="@+id/job_text"
+            android:layout_width="240dp"
+            android:layout_height="48dp"
+            android:textAlignment="center"
+            android:hint="Job Description"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_regular"
+            android:layout_margin="25dp"
+            android:background="@drawable/custom_contact_editview"/>
+
+        <!-- Description -->
+        <EditText
+            android:id="@+id/contactdescription_text"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:background="@drawable/custom_describe_textview"
+            android:layout_marginTop="15dp"
+            android:gravity="top"
+            android:padding="10dp"
+            android:hint="Anything want to ask?"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_regular"/>
+
+        <!-- Send button -->
+        <Button
+            android:id="@+id/contact_sendBtn"
+            android:layout_width="150dp"
+            android:layout_height="54dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/custom_login_btn"
+            android:text="Send"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_semibold"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

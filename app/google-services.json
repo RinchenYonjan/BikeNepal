@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1023979590438",
+    "project_id": "bikenepal-8fa3e",
+    "storage_bucket": "bikenepal-8fa3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1023979590438:android:7ea59f96bd7abc6428a7e7",
+        "android_client_info": {
+          "package_name": "com.example.bikenepal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYFGIWOGE317sXeRWChFlYBSlc2nRio_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

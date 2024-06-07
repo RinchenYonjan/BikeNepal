@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Oval shape -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#152DAE"/>
+            <size
+                android:width="8800dp"
+                android:height="8800dp"/>
+        </shape>
+    </item>
+
+    <!-- Image on top, centered within the oval -->
+    <item
+        android:width="4800dp"
+        android:height="4800dp"
+        android:drawable="@drawable/camera"
+        android:gravity="center"/>
+</layer-list>

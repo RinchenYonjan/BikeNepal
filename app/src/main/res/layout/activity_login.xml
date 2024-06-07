@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.LoginActivity"
+    android:background="@drawable/bmw">
+
+    <!-- Creating image back button-->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/back"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Creating vertical linear layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Heading h1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:text="@string/login"
+            android:fontFamily="@font/manrope_bold"
+            android:textColor="#ffffff"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <!-- username -->
+        <EditText
+            android:id="@+id/login_username"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_margin="30dp"
+            android:background="@drawable/custom_edit_view"
+            android:gravity="center"
+            android:hint="@string/username"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_regular" />
+
+        <!-- password -->
+        <EditText
+            android:id="@+id/login_password"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:background="@drawable/custom_edit_view"
+            android:gravity="center"
+            android:hint="@string/password"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_regular" />
+
+        <!-- Login button -->
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_margin="30dp"
+            android:text="@string/login_txt"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textAllCaps="false"
+            android:fontFamily="@font/manrope_semibold"
+            android:background="@drawable/custom_login_btn"/>
+
+        <!-- Have not register yet?-->
+        <TextView
+            android:id="@+id/notRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Have not register yet? Register Here."
+            android:fontFamily="@font/manrope_regular"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

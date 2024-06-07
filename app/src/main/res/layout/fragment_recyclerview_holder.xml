@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".recyclerview.RecyclerViewHolder"
+    android:orientation="horizontal"
+    android:layout_marginTop="10dp">
+
+    <!-- Bike Image -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background" />
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textSize="20sp"
+        android:fontFamily="@font/manrope_bold"
+        android:textColor="#121212"
+        android:layout_toEndOf="@+id/imageView"/>
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/imageView"
+        android:layout_below="@id/name"
+        android:textColor="#808080"
+        tools:text="Price" />
+
+    <!-- Fuel Tank -->
+    <TextView
+        android:id="@+id/fuel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/price"
+        android:layout_below="@id/name"
+        android:textColor="#808080"
+        tools:text="Fuel Tank" />
+
+    <!-- Space -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/white"
+        android:layout_below="@+id/imageView"
+        android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+

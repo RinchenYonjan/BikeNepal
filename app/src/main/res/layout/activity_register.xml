@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.RegisterActivity"
+    android:background="@drawable/bmw">
+
+    <!-- Creating back button -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/back"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- Creating vertical linear layout -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Heading h1 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="40dp"
+            android:text="@string/register"
+            android:fontFamily="@font/manrope_bold"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/register_username"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_edit_view"
+            android:gravity="center"
+            android:hint="@string/username"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_regular"  />
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/register_email"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_edit_view"
+            android:gravity="center"
+            android:hint="Email"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_regular"  />
+
+        <!-- Phone number -->
+        <EditText
+            android:id="@+id/register_phonenumber"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_edit_view"
+            android:gravity="center"
+            android:hint="Phone Number"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_regular"  />
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="280dp"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_edit_view"
+            android:gravity="center"
+            android:hint="Password"
+            android:textSize="16sp"
+            android:fontFamily="@font/manrope_regular"  />
+
+
+        <!-- Creating horizontal linear layout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!-- Checkbox -->
+            <CheckBox
+                android:id="@+id/register_terms"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+
+            <!-- Terms and Policy-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="I accept the Terms and Conditions &amp; Privacy Policy."
+                android:textSize="14sp"
+                android:fontFamily="@font/manrope_regular"
+                android:textColor="#212121" />
+
+        </LinearLayout>
+
+
+        <!-- Submit button -->
+        <Button
+            android:id="@+id/register_button"
+            android:layout_width="180dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/custom_login_btn"
+            android:text="@string/submit"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/manrope_semibold"
+            android:textAllCaps="false" />
+
+        <!-- Caption -->
+        <TextView
+            android:id="@+id/alreadyRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an Account? Login Here."
+            android:fontFamily="@font/manrope_regular"
+            android:textColor="#212121"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

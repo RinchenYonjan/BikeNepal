@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- first LinearLayout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.HomeFragment">
+
+    <!-- RelativeLayout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!-- MyPortfolio.txt -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bike Nepal"
+            android:fontFamily="@font/manrope_bold"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="40dp"
+            android:textColor="#212121"/>
+
+
+        <!-- Good morning text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hi! Welcome User."
+            android:fontFamily="@font/manrope_semibold"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="80dp"
+            android:textColor="#212121"
+            style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+
+        <!-- BackgroundImage -->
+        <ImageView
+            android:id="@+id/bgimg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="130dp"
+            android:background="@drawable/custom_describe_textview"
+            app:srcCompat="@drawable/background"/>
+
+
+        <!-- RinchenYonjan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Man and Machine"
+            android:fontFamily="@font/manrope_bold"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginTop="450dp"/>
+
+
+        <!-- description text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Bike Nepal Mobile App show different company bike which are available in nepal dealership directly to user who want to see the price and details about bikes."
+            android:fontFamily="@font/manrope_semibold"
+            android:textColor="#f9f9f9"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="550dp"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+</LinearLayout>
