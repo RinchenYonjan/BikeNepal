@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.intro2Fragment"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#1260cc">
 
     <!-- Retrofit image -->
     <ImageView
@@ -21,7 +22,7 @@
         android:text="This mobile application consist of retrofit to make network requests to fetch data from APIs."
         android:fontFamily="@font/manrope_regular"
         android:textSize="16sp"
-        android:textColor="#212121"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         android:gravity="center"
         android:layout_marginTop="25dp"/>

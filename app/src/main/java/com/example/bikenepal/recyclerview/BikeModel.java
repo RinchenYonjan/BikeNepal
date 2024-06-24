@@ -2,18 +2,21 @@ package com.example.bikenepal.recyclerview;
 
 public class BikeModel {
 
-    String Name;
-    String Price;
-    String FuelTank;
-    int Image;
+    private String Name;
+    private String Price;
+    private String FuelTank;
+    private int Image;
+    private String Url;
 
-    public BikeModel(String name, String price, String fueltank, int image){
+    public BikeModel(String name, String price, String fueltank, int image, String url){
         this.Name= name;
         this.Price = price;
         this.FuelTank = fueltank;
         this.Image = image;
+        this.Url = url;
     }
 
+    // Getter and Setter method
     public String getName(){
         return Name;
     }
@@ -30,6 +33,10 @@ public class BikeModel {
         return Image;
     }
 
+    public String getUrl() {
+        return Url;
+    }
+
     public void setName(String name){
         this.Name = name;
     }
@@ -38,7 +45,7 @@ public class BikeModel {
         this.Price = price;
     }
 
-    public void setMileage(String fueltank){
+    public void setFuelTank(String fueltank){
         this.FuelTank = fueltank;
     }
 
@@ -46,4 +53,7 @@ public class BikeModel {
         this.Image = image;
     }
 
+    public void setUrl(String url){
+        this.Url = url;
+    }
 }

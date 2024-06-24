@@ -13,7 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
         <!-- MyPortfolio.txt -->
         <TextView
             android:layout_width="wrap_content"
@@ -26,7 +25,6 @@
             android:layout_marginTop="40dp"
             android:layout_marginStart="40dp"
             android:textColor="#212121"/>
-
 
         <!-- Good morning text -->
         <TextView
@@ -60,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Man and Machine"
+            android:text="Learn About Bikes"
             android:fontFamily="@font/manrope_bold"
             android:textColor="@color/white"
             android:textSize="32sp"
@@ -73,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Bike Nepal Mobile App show different company bike which are available in nepal dealership directly to user who want to see the price and details about bikes."
+            android:text="Bike Nepal Mobile App show different company bike which are available in nepal dealership directly to user who want to see the details and information about bikes."
             android:fontFamily="@font/manrope_semibold"
             android:textColor="#f9f9f9"
             android:textSize="16sp"

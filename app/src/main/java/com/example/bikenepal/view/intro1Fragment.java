@@ -19,6 +19,8 @@ public class intro1Fragment extends Fragment {
     private GestureDetector gestureDetector;
     private MainIntroActivity mainIntroActivity;
 
+
+    // Ensure the hosting activity is an instance of MainIntroActivity
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
@@ -57,6 +59,7 @@ public class intro1Fragment extends Fragment {
             return true;
         }
 
+        // Creating onFling method to detect finger movement
         @Override
         public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {
             boolean result = false;
@@ -80,17 +83,19 @@ public class intro1Fragment extends Fragment {
         }
 
         public void onSwipeRight() {
-            // Call method in MainIntroActivity to go to the previous fragment
+            // Call moveToPreviousFragment method of MainIntroActivity class to go next fragment
             if (mainIntroActivity != null) {
                 mainIntroActivity.moveToPreviousFragment();
             }
         }
 
         public void onSwipeLeft() {
-            // Call method in MainIntroActivity to go to the next fragment
+            // Call moveToNextFragment method of MainIntroActivity class to go next fragment
             if (mainIntroActivity != null) {
                 mainIntroActivity.moveToNextFragment();
             }
         }
+
     }
+
 }

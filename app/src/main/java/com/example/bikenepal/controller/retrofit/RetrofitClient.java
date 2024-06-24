@@ -17,6 +17,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient extends AppCompatActivity {
 
 
+
     // RetrofitClient connection established
     public retrofit2.Retrofit retrofit = new retrofit2.Retrofit.Builder()
             .baseUrl("http://192.168.1.67/API/")
@@ -28,7 +29,7 @@ public class RetrofitClient extends AppCompatActivity {
 
 
 
-    //  userRegister request and response
+    // Method on user register request and response
     public void userRegister(String username, String email, String phonenumber, String password)
     {
 
@@ -37,6 +38,8 @@ public class RetrofitClient extends AppCompatActivity {
 
         Call<UserModel> call = api.register(userModel);
         call.enqueue(new Callback<UserModel>() {
+
+            // Method on response of user register
             @Override
             public void onResponse(Call<UserModel> call, Response<UserModel> response) {
                 if (response.isSuccessful()) {
@@ -54,6 +57,7 @@ public class RetrofitClient extends AppCompatActivity {
                 }
             }
 
+            // Method on failure of user register
             @Override
             public void onFailure(Call<UserModel> call, Throwable t) {
                 Log.d("register", "Registration failed: " + t.getMessage());
@@ -67,14 +71,16 @@ public class RetrofitClient extends AppCompatActivity {
 
 
 
-    //  loginUser request and response
+    // Method on user login request and response
     public void loginUser(String username, String password, Activity activity)
     {
         LoginModel loginModel = new LoginModel(username, password);
         Log.d("login", "login inresponse");
+
         Call<LoginModel> loginModelCall = api.login(loginModel);
         loginModelCall.enqueue(new Callback<LoginModel>() {
 
+            // Method on response of user login
             @Override
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
 
@@ -89,6 +95,7 @@ public class RetrofitClient extends AppCompatActivity {
                 }
             }
 
+            // Method on failure of user login
             @Override
             public void onFailure(Call<LoginModel> call, Throwable t) {
 
@@ -103,14 +110,16 @@ public class RetrofitClient extends AppCompatActivity {
 
 
 
-    //  contactSend request and response
+    //  Method on contact message request and response
     public void contactSend(String username, String address, String job, String description) {
 
         ContactModel contactModel = new ContactModel(username, address, job, description);
         Log.d("contact register", "Initiating contact user data..");
 
-        Call<ContactModel> call = api.contact(contactModel);
-        call.enqueue(new Callback<ContactModel>() {
+        Call<ContactModel> Contactcall = api.contact(contactModel);
+        Contactcall.enqueue(new Callback<ContactModel>() {
+
+            // Method on response of user contact message
             @Override
             public void onResponse(Call<ContactModel> call, Response<ContactModel> response) {
                 if (response.isSuccessful()) {
@@ -128,6 +137,7 @@ public class RetrofitClient extends AppCompatActivity {
                 }
             }
 
+            // Method on failure of user contact message
             @Override
             public void onFailure(Call<ContactModel> call, Throwable t) {
                 Log.d("contact register", "Contact registration failed: " + t.getMessage());

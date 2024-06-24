@@ -18,7 +18,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = "BikeFirebaseMessagingService";
     private static final String CHANNEL_ID = "BikeNotify";
 
-
+    // Method message on received
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
 
@@ -47,7 +47,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     }
 
-
+    // Method on showing notification details
     private void showNotification(String title, String body) {
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this, "BikeNotify")
                 .setSmallIcon(R.drawable.motorbike)

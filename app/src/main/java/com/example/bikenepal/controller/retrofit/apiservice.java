@@ -6,10 +6,10 @@ import com.example.bikenepal.model.UserModel;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
 public interface apiservice {
-
 
     // post UserModel data to register.php
     @POST("register.php")

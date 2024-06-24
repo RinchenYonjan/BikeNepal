@@ -19,6 +19,8 @@ public class intro2Fragment extends Fragment {
     private GestureDetector gestureDetector;
     private MainIntroActivity mainIntroActivity;
 
+
+    // Ensure the hosting activity is an instance of MainIntroActivity
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);

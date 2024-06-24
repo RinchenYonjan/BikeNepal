@@ -72,7 +72,7 @@
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
 
-
+        <!-- Rinchen Yonjan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,7 +95,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"/>
 
-
+        <!-- Null -->
         <TextView
             android:id="@+id/dateofbirth"
             android:layout_width="wrap_content"
@@ -119,7 +119,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"/>
 
-
+        <!-- Male -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -142,11 +142,11 @@
             android:layout_marginTop="20dp"
             android:layout_marginStart="20dp"/>
 
-
+        <!-- Bachelor -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Islington College"
+            android:text="Bachelor"
             android:fontFamily="@font/manrope_regular"
             android:textSize="16sp"
             android:textColor="@android:color/white"

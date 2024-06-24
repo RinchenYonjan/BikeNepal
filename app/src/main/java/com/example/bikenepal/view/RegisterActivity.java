@@ -65,14 +65,15 @@ public class RegisterActivity extends AppCompatActivity {
     private void registerUser() {
         String username = registerUsername.getText().toString().trim();
         String email = registerEmail.getText().toString().trim();
-        String phoneNumber = registerPhoneNumber.getText().toString().trim();
+        String phonenumber = registerPhoneNumber.getText().toString().trim();
         String password = registerPassword.getText().toString().trim();
         boolean termsAccepted = registerTerms.isChecked();
 
-        if (isInputValid(username, email, phoneNumber, password, termsAccepted)) {
+        if (isInputValid(username, email, phonenumber, password, termsAccepted)) {
             RetrofitClient retrofitClientInstance = new RetrofitClient();
-            retrofitClientInstance.userRegister(username, email, phoneNumber, password);
+            retrofitClientInstance.userRegister(username, email, phonenumber, password);
             Toast.makeText(getApplicationContext(), "User registered successfully", Toast.LENGTH_LONG).show();
+            clearInputFields();
         }
     }
 
@@ -105,15 +106,26 @@ public class RegisterActivity extends AppCompatActivity {
         return true;
     }
 
+    // Method to Activity Login
     private void navigateToLogin() {
         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
         startActivity(intent);
         finish();
     }
 
+    // Method to Activity Welcome
     private void navigateToWelcome() {
         Intent intent = new Intent(RegisterActivity.this, WelcomeActivity.class);
         startActivity(intent);
         finish();
+    }
+
+    // Method to text field empty
+    private void clearInputFields() {
+        registerUsername.setText("");
+        registerEmail.setText("");
+        registerPhoneNumber.setText("");
+        registerPassword.setText("");
+        registerTerms.setText("");
     }
 }

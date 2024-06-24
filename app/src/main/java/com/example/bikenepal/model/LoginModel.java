@@ -11,12 +11,13 @@ public class LoginModel {
     private String password;
 
 
-    //Creating constructor
+    //Creating class constructor
     public LoginModel(String username, String password) {
         this.username = username;
         this.password = password;
     }
 
+    // Getter method
     public String getUsername() {
         return username;
     }

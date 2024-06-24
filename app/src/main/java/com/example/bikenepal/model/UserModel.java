@@ -16,7 +16,7 @@ public class UserModel {
     @SerializedName("password") // password name for JavaScript Object Notation(JASON).
     private String password;
 
-    // Creating constructor
+    // Creating class constructor
     public UserModel(String username, String email, String phonenumber, String password) {
         this.username = username;
         this.email = email;
@@ -24,6 +24,7 @@ public class UserModel {
         this.password = password;
     }
 
+    // Getter method
     public String getUsername() {
         return username;
     }

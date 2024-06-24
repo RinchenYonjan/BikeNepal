@@ -4,19 +4,19 @@ import com.google.gson.annotations.SerializedName;
 
 public class ContactModel {
 
-    @SerializedName("username") // Username name for JavaScript Object Notation(JASON).
+    @SerializedName("username") // username name for JavaScript Object Notation(JASON) or other.
     private String username;
 
-    @SerializedName("address")  // address name for JavaScript Object Notation(JASON).
+    @SerializedName("address")  // address name for JavaScript Object Notation(JASON) or other.
     private String address;
 
-    @SerializedName("job") // job name for JavaScript Object Notation(JASON).
+    @SerializedName("job") // job name for JavaScript Object Notation(JASON) or other.
     private String job;
 
-    @SerializedName("description") // description name for JavaScript Object Notation(JASON).
+    @SerializedName("description") // description name for JavaScript Object Notation(JASON) or other.
     private String description;
 
-    // Creating constructor
+    // Creating class constructor
     public ContactModel(String username, String address , String job, String description) {
         this.username = username;
         this.address = address;
@@ -24,6 +24,7 @@ public class ContactModel {
         this.description = description;
     }
 
+    // Getter method
     public String getUsername() {
         return username;
     }

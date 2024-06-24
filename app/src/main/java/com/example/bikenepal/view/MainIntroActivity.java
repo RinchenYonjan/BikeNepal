@@ -3,7 +3,7 @@ package com.example.bikenepal.view;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import com.example.bikenepal.R;
@@ -11,8 +11,8 @@ import com.example.bikenepal.R;
 
 public class MainIntroActivity extends AppCompatActivity {
 
-    TextView skip_Btn;
-    TextView next_Btn;
+    Button skip_Btn;
+    Button next_Btn;
 
     intro1Fragment intro1 = new intro1Fragment();
     intro2Fragment intro2 = new intro2Fragment();
@@ -46,7 +46,7 @@ public class MainIntroActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainIntroActivity.this, WelcomeActivity.class);
                 startActivity(intent);
-                finish(); // Optional: close the current activity
+                finish();
             }
         });
     }
