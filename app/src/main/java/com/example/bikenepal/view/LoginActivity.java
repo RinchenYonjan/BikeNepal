@@ -17,7 +17,7 @@ import com.example.bikenepal.controller.retrofit.RetrofitClient;
 public class LoginActivity extends AppCompatActivity {
 
     private ImageButton backButton;
-    private EditText usernameEditText, passwordEditText;
+    private EditText usernamelogin, passwordlogin;
     private Button loginButton;
     private TextView notRegisteredTextView;
 
@@ -25,17 +25,15 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         // Initialize views
         initializeViews();
-
         // Set up click listeners
         setUpClickListeners();
     }
 
     private void initializeViews() {
-        usernameEditText = findViewById(R.id.login_username);
-        passwordEditText = findViewById(R.id.login_password);
+        usernamelogin = findViewById(R.id.login_username);
+        passwordlogin = findViewById(R.id.login_password);
         loginButton = findViewById(R.id.login_button);
         backButton = findViewById(R.id.back_button);
         notRegisteredTextView = findViewById(R.id.notRegister);
@@ -65,8 +63,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void handleLogin() {
-        String username = usernameEditText.getText().toString().trim();
-        String password = passwordEditText.getText().toString().trim();
+        String username = usernamelogin.getText().toString().trim();
+        String password = passwordlogin.getText().toString().trim();
 
         if (username.isEmpty() || password.isEmpty()) {
             Toast.makeText(getApplicationContext(), "Username and Password are required", Toast.LENGTH_LONG).show();

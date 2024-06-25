@@ -62,6 +62,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+
     private void registerUser() {
         String username = registerUsername.getText().toString().trim();
         String email = registerEmail.getText().toString().trim();
@@ -76,6 +77,7 @@ public class RegisterActivity extends AppCompatActivity {
             clearInputFields();
         }
     }
+
 
     private boolean isInputValid(String username, String email, String phoneNumber, String password, boolean termsAccepted) {
         if (TextUtils.isEmpty(username)) {
@@ -106,6 +108,7 @@ public class RegisterActivity extends AppCompatActivity {
         return true;
     }
 
+
     // Method to Activity Login
     private void navigateToLogin() {
         Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
@@ -113,12 +116,14 @@ public class RegisterActivity extends AppCompatActivity {
         finish();
     }
 
+
     // Method to Activity Welcome
     private void navigateToWelcome() {
         Intent intent = new Intent(RegisterActivity.this, WelcomeActivity.class);
         startActivity(intent);
         finish();
     }
+
 
     // Method to text field empty
     private void clearInputFields() {

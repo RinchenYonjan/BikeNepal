@@ -3,6 +3,7 @@ package com.example.bikenepal.controller.retrofit;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.bikenepal.MainActivity;
 import com.example.bikenepal.model.ContactModel;
@@ -16,28 +17,27 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient extends AppCompatActivity {
 
-
-
     // RetrofitClient connection established
     public retrofit2.Retrofit retrofit = new retrofit2.Retrofit.Builder()
             .baseUrl("http://192.168.1.67/API/")
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
-            // apiService creation
-            apiservice api = retrofit.create(apiservice.class);
+    // apiService creation
+    apiservice api = retrofit.create(apiservice.class);
+
 
 
 
     // Method on user register request and response
-    public void userRegister(String username, String email, String phonenumber, String password)
-    {
+    public void userRegister(String username, String email, String phonenumber, String password) {
 
         UserModel userModel = new UserModel(username, email, phonenumber, password);
         Log.d("register", "Initiating user registration");
 
         Call<UserModel> call = api.register(userModel);
         call.enqueue(new Callback<UserModel>() {
+
 
             // Method on response of user register
             @Override
@@ -57,6 +57,7 @@ public class RetrofitClient extends AppCompatActivity {
                 }
             }
 
+
             // Method on failure of user register
             @Override
             public void onFailure(Call<UserModel> call, Throwable t) {
@@ -65,52 +66,60 @@ public class RetrofitClient extends AppCompatActivity {
                 Log.d("register", "Request URL: " + call.request().url());
             }
         });
-
     }
 
 
 
 
     // Method on user login request and response
-    public void loginUser(String username, String password, Activity activity)
-    {
+    public void loginUser(String username, String password, Activity activity) {
         LoginModel loginModel = new LoginModel(username, password);
-        Log.d("login", "login inresponse");
+        Log.d("login", "Initiating login request");
 
         Call<LoginModel> loginModelCall = api.login(loginModel);
         loginModelCall.enqueue(new Callback<LoginModel>() {
 
+
             // Method on response of user login
             @Override
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
-
-                if(response.isSuccessful())
-                {
-
-                    Log.d("login", "successfully login");
+                if (response.isSuccessful()) {
+                    Log.d("login", "Successfully logged in");
 
                     Intent intent = new Intent(activity, MainActivity.class);
                     activity.startActivity(intent);
 
+                } else {
+                    Log.d("login", "Login failed with response code: " + response.code());
+                    // Display a Toast message for invalid credentials
+                    Toast.makeText(activity, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                    // Optionally, log the response error body
+                    try {
+                        if (response.errorBody() != null) {
+                            Log.d("login", "Error: " + response.errorBody().string());
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
+
 
             // Method on failure of user login
             @Override
             public void onFailure(Call<LoginModel> call, Throwable t) {
-
-                Log.d("login", "login unsuccessful!");
-
-                System.out.println(call.request().url());
-
+                Log.d("login", "Login request failed: " + t.getMessage());
+                // Display a Toast message for failure
+                Toast.makeText(activity, "An error occurred: " + t.getMessage(), Toast.LENGTH_SHORT).show();
+                // Log the request URL for debugging
+                Log.d("login", "Request URL: " + call.request().url());
             }
         });
     }
 
 
 
-
-    //  Method on contact message request and response
+    // Method on contact message request and response
     public void contactSend(String username, String address, String job, String description) {
 
         ContactModel contactModel = new ContactModel(username, address, job, description);
@@ -118,6 +127,7 @@ public class RetrofitClient extends AppCompatActivity {
 
         Call<ContactModel> Contactcall = api.contact(contactModel);
         Contactcall.enqueue(new Callback<ContactModel>() {
+
 
             // Method on response of user contact message
             @Override
@@ -137,6 +147,7 @@ public class RetrofitClient extends AppCompatActivity {
                 }
             }
 
+
             // Method on failure of user contact message
             @Override
             public void onFailure(Call<ContactModel> call, Throwable t) {
@@ -145,7 +156,5 @@ public class RetrofitClient extends AppCompatActivity {
                 Log.d("contact register", "Request URL: " + call.request().url());
             }
         });
-
     }
-
 }

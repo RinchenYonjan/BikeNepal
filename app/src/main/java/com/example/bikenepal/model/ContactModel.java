@@ -40,4 +40,20 @@ public class ContactModel {
     public String getDescription() {
         return description;
     }
+
+    public void setUsername(String username){
+        this.username = username;
+    }
+
+    public void setAddress(String address){
+        this.address = address;
+    }
+
+    public void setJob(String job){
+        this.job = job;
+    }
+
+    public void setDescription(String description){
+        this.description = description;
+    }
 }
