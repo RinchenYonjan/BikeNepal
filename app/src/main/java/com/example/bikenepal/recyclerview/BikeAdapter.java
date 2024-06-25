@@ -18,19 +18,21 @@ public class BikeAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
 
 
     Context context;
+
     List<BikeModel> bikelist;
 
 
     // Creating class constructor
-    public BikeAdapter(Context context, List<BikeModel> bikeModel) {
+    public BikeAdapter(Context context, List<BikeModel> bikelist) {
         this.context = context;
-        this.bikelist = bikeModel;
+        this.bikelist = bikelist;
     }
 
     @NonNull
     @Override
     public RecyclerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new RecyclerViewHolder(LayoutInflater.from(context).inflate(R.layout.fragment_recyclerview_holder,parent, false));
+        View view = LayoutInflater.from(context).inflate(R.layout.fragment_recyclerview_holder, parent, false);
+        return new RecyclerViewHolder(view);
     }
 
     // To display data at the specific position

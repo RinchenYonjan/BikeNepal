@@ -68,7 +68,7 @@
             android:textSize="20dp"
             android:fontFamily="@font/manrope_bold"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="30dp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
 
@@ -92,7 +92,7 @@
             android:textSize="20dp"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"/>
 
         <!-- Null -->
@@ -116,7 +116,7 @@
             android:textColor="@android:color/white"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"/>
 
         <!-- Male -->
@@ -135,11 +135,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="CURRENT ACTIVITY"
-            android:fontFamily="@font/manrope_regular"
+            android:fontFamily="@font/manrope_bold"
             android:textColor="@android:color/white"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="30dp"
             android:layout_marginStart="30dp"/>
 
         <!-- Bachelor -->
