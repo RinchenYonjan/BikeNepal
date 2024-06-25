@@ -89,18 +89,6 @@ public class RetrofitClient extends AppCompatActivity {
                     Intent intent = new Intent(activity, MainActivity.class);
                     activity.startActivity(intent);
 
-                } else {
-                    Log.d("login", "Login failed with response code: " + response.code());
-                    // Display a Toast message for invalid credentials
-                    Toast.makeText(activity, "Invalid username or password", Toast.LENGTH_SHORT).show();
-                    // Optionally, log the response error body
-                    try {
-                        if (response.errorBody() != null) {
-                            Log.d("login", "Error: " + response.errorBody().string());
-                        }
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
                 }
             }
 
@@ -108,14 +96,17 @@ public class RetrofitClient extends AppCompatActivity {
             // Method on failure of user login
             @Override
             public void onFailure(Call<LoginModel> call, Throwable t) {
-                Log.d("login", "Login request failed: " + t.getMessage());
-                // Display a Toast message for failure
-                Toast.makeText(activity, "An error occurred: " + t.getMessage(), Toast.LENGTH_SHORT).show();
                 // Log the request URL for debugging
                 Log.d("login", "Request URL: " + call.request().url());
+                Log.d("login", "Login request failed: " + t.getMessage());
+
+                // Display a Toast message for failure
+                Toast.makeText(activity, "Invalid username or password", Toast.LENGTH_SHORT).show();
+
             }
         });
     }
+
 
 
 

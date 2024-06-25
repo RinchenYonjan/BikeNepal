@@ -64,11 +64,11 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Full Name"
+            android:text="FULL NAME"
             android:textSize="20dp"
             android:fontFamily="@font/manrope_bold"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="40dp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
 
@@ -80,44 +80,44 @@
             android:fontFamily="@font/manrope_regular"
             android:textSize="16sp"
             android:layout_marginTop="5dp"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="30dp"
             android:textColor="@android:color/white"/>
 
         <!-- Age -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Age"
+            android:text="AGE"
             android:fontFamily="@font/manrope_bold"
             android:textSize="20dp"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"/>
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="30dp"/>
 
         <!-- Null -->
         <TextView
             android:id="@+id/dateofbirth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Null"
+            android:text="Unknown"
             android:fontFamily="@font/manrope_regular"
             android:textSize="16sp"
             android:textColor="@android:color/white"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"/>
 
         <!-- Gender -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gender"
+            android:text="GENDER"
             android:fontFamily="@font/manrope_bold"
             android:textColor="@android:color/white"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"/>
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="30dp"/>
 
         <!-- Male -->
         <TextView
@@ -127,20 +127,20 @@
             android:fontFamily="@font/manrope_regular"
             android:textSize="16sp"
             android:textColor="@android:color/white"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"/>
 
         <!-- Current Activity -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Current Activity"
+            android:text="CURRENT ACTIVITY"
             android:fontFamily="@font/manrope_regular"
             android:textColor="@android:color/white"
             android:textStyle="bold"
             android:textSize="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp"/>
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="30dp"/>
 
         <!-- Bachelor -->
         <TextView
@@ -150,7 +150,7 @@
             android:fontFamily="@font/manrope_regular"
             android:textSize="16sp"
             android:textColor="@android:color/white"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"/>
 
     </LinearLayout>
@@ -158,19 +158,5 @@
     </androidx.cardview.widget.CardView>
 
     </LinearLayout>
-
-
-    <!--camera-button-->
-    <ImageButton
-        android:id="@+id/cameraButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@android:color/transparent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/custom_camera"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="320dp"
-        android:layout_marginBottom="35dp"/>
-
 
 </FrameLayout>

@@ -17,6 +17,7 @@ public class LoginModel {
         this.password = password;
     }
 
+
     // Getter and Setter method
     public String getUsername() {
         return username;

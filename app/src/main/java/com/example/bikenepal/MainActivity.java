@@ -1,11 +1,16 @@
 package com.example.bikenepal;
 
 import android.content.Intent;
+import android.Manifest;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import com.example.bikenepal.view.BikeFragment;
 import com.example.bikenepal.view.ContactFragment;
@@ -17,7 +22,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
 
-public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener{
+public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
 
     BottomNavigationView bottomNavigationView;
 
@@ -31,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
 
     SettingFragment setting = new SettingFragment();
 
+    private static final int PERMISSION_REQUEST_CODE = 1;
 
 
     @Override
@@ -41,19 +47,20 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         bottomNavigationView.setOnItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.home);
 
-        // Wake up mobile screen till duration of 2.5 min
+
+        // Check and request permissions
+        requestPermissions();
+
+
+        // Wake up mobile screen till duration of 2.5 min otherwise redirect user to login activity
         new Thread(new Runnable() {
             @Override
             public void run() {
 
                 try {
-
                     Thread.sleep(150000);
-
                 } catch (InterruptedException ea) {
-
                     ea.printStackTrace();
-
                 }
 
                 runOnUiThread(new Runnable() {
@@ -63,22 +70,20 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
                         startActivity(intent);
                     }
                 });
-
             }
-
         }).start();
+
     }
 
 
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId() == R.id.home)
-        {
+        if (item.getItemId() == R.id.home) {
             getSupportFragmentManager().beginTransaction().replace(R.id.container, home).commit();
             return true;
 
-        } else if(item.getItemId() == R.id.profile){
+        } else if (item.getItemId() == R.id.profile) {
 
             getSupportFragmentManager().beginTransaction().replace(R.id.container, profile).commit();
             return true;
@@ -101,6 +106,42 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         }
 
         return false;
+    }
+
+
+
+    private void requestPermissions() {
+
+        boolean cameraPermissionGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
+
+        boolean notificationPermissionGranted = true;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {   // android 10 'Q' version
+            notificationPermissionGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED;
+        }
+
+        if (!cameraPermissionGranted || !notificationPermissionGranted) {
+            String[] permissions;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {   // android 10 'Q' version
+                permissions = new String[]{Manifest.permission.CAMERA, Manifest.permission.POST_NOTIFICATIONS};
+            } else {
+                permissions = new String[]{Manifest.permission.CAMERA};
+            }
+
+            ActivityCompat.requestPermissions(this, permissions, PERMISSION_REQUEST_CODE);
+
+        } else {
+            // Permissions already granted
+            onPermissionsGranted();
+        }
+
+    }
+
+
+
+    private void onPermissionsGranted() {
+        // Code to execute when the permissions are granted
+
     }
 
 
