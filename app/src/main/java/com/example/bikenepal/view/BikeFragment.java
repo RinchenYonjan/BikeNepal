@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.bikenepal.R;
-import com.example.bikenepal.recyclerview.BikeAdapter;
+import com.example.bikenepal.adapter.BikeAdapter;
 import com.example.bikenepal.model.BikeModel;
 import java.util.ArrayList;
 import java.util.List;

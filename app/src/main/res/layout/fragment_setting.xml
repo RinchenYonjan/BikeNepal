@@ -38,14 +38,14 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/white"
-            android:layout_below="@+id/imageView"
             android:layout_marginTop="10dp"/>
 
         <!-- Notification -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackground">
 
             <ImageButton
                 android:layout_width="34dp"
@@ -72,14 +72,14 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/white"
-            android:layout_below="@+id/imageView"
             android:layout_marginTop="10dp"/>
 
         <!-- Terms and Conditions -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackground">
 
             <ImageButton
                 android:layout_width="34dp"
@@ -106,14 +106,14 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/white"
-            android:layout_below="@+id/imageView"
             android:layout_marginTop="10dp"/>
 
         <!-- Dark and Light Model -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackground">
 
             <ImageButton
                 android:layout_width="34dp"
@@ -140,14 +140,14 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/white"
-            android:layout_below="@+id/imageView"
             android:layout_marginTop="10dp"/>
 
         <!-- Change Language -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackground">
 
             <ImageButton
                 android:layout_width="34dp"
@@ -174,14 +174,14 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/white"
-            android:layout_below="@+id/imageView"
             android:layout_marginTop="10dp"/>
 
         <!-- Security Measure -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackground">
 
             <ImageButton
                 android:layout_width="34dp"
@@ -208,14 +208,14 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/white"
-            android:layout_below="@+id/imageView"
             android:layout_marginTop="10dp"/>
 
         <!-- Change Password -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackground">
 
             <ImageButton
                 android:layout_width="34dp"
@@ -242,7 +242,6 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/white"
-            android:layout_below="@+id/imageView"
             android:layout_marginTop="10dp"/>
 
         <!-- Logout -->
@@ -250,7 +249,8 @@
             android:id="@+id/layoutlogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackground">
 
             <ImageButton
                 android:layout_width="34dp"
@@ -277,7 +277,6 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:background="@color/white"
-            android:layout_below="@+id/imageView"
             android:layout_marginTop="10dp"/>
 
     </LinearLayout>

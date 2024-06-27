@@ -1,4 +1,4 @@
-package com.example.bikenepal.recyclerview;
+package com.example.bikenepal.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bikenepal.R;
 import com.example.bikenepal.model.BikeModel;
+import com.example.bikenepal.recyclerview.RecyclerViewHolder;
+
 
 import java.util.List;
 

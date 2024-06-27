@@ -50,6 +50,7 @@ public class MainIntroActivity extends AppCompatActivity {
             }
         });
 
+
         viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
@@ -58,13 +59,18 @@ public class MainIntroActivity extends AppCompatActivity {
             public void onPageSelected(int position) {
                 if (position == adapter.getCount() - 1) {
                     next_Btn.setText("Finish");
+                    skip_Btn.setVisibility(View.GONE); // Hide the skip button
                 } else {
                     next_Btn.setText("Next");
+                    skip_Btn.setVisibility(View.VISIBLE); // Show the skip button
                 }
             }
 
+
             @Override
-            public void onPageScrollStateChanged(int state) {}
+            public void onPageScrollStateChanged(int state) {
+
+            }
         });
     }
 

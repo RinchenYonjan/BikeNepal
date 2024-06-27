@@ -25,7 +25,7 @@ public class Splash extends AppCompatActivity {
 
         // Fading animation
         ObjectAnimator fadeOut = ObjectAnimator.ofFloat(icon, "alpha", 1f, 0f);
-        fadeOut.setDuration(1500); // Duration in milliseconds
+        fadeOut.setDuration(1000); // Duration in milliseconds
         fadeOut.setRepeatCount(ObjectAnimator.INFINITE);
         fadeOut.setRepeatMode(ObjectAnimator.REVERSE);
         fadeOut.start();

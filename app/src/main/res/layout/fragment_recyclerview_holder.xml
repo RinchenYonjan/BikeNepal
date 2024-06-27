@@ -6,7 +6,8 @@
     android:layout_height="wrap_content"
     tools:context=".recyclerview.RecyclerViewHolder"
     android:orientation="horizontal"
-    android:layout_marginTop="10dp">
+    android:layout_marginTop="10dp"
+    android:foreground="?attr/selectableItemBackground">
 
     <!-- Bike Image -->
     <ImageView

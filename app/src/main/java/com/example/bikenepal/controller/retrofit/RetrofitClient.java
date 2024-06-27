@@ -10,6 +10,9 @@ import com.example.bikenepal.model.ContactModel;
 import com.example.bikenepal.model.LoginModel;
 import com.example.bikenepal.model.UserModel;
 import java.io.IOException;
+import java.net.ConnectException;
+import java.net.UnknownHostException;
+
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -77,7 +80,6 @@ public class RetrofitClient extends AppCompatActivity {
         Call<LoginModel> loginModelCall = api.login(loginModel);
         loginModelCall.enqueue(new Callback<LoginModel>() {
 
-
             // Method on response of user login
             @Override
             public void onResponse(Call<LoginModel> call, Response<LoginModel> response) {
@@ -86,10 +88,22 @@ public class RetrofitClient extends AppCompatActivity {
 
                     Intent intent = new Intent(activity, MainActivity.class);
                     activity.startActivity(intent);
+                } else {
+                    Log.d("login", "Login request failed with response code: " + response.code());
 
+                    // Check the response code and show appropriate message
+                    String message;
+                    if (response.code() == 401) {
+                        // 401 Unauthorized indicates incorrect username or password
+                        message = "Incorrect username or password";
+                    } else {
+                        // Other HTTP errors
+                        message = "Login failed: " + response.message();
+                    }
+
+                    Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
                 }
             }
-
 
             // Method on failure of user login
             @Override
@@ -98,12 +112,27 @@ public class RetrofitClient extends AppCompatActivity {
                 Log.d("login", "Request URL: " + call.request().url());
                 Log.d("login", "Login request failed: " + t.getMessage());
 
-                // Display a Toast message for failure
-                Toast.makeText(activity, "Invalid username or password", Toast.LENGTH_SHORT).show();
+                String message;
+                if (t instanceof UnknownHostException) {
+                    // Server not found
+                    message = "Server not found";
+                } else if (t instanceof ConnectException) {
+                    // Could not connect to the server
+                    message = "Unable to connect to the server";
+                } else if (t instanceof IOException) {
+                    // General network error
+                    message = "Network error";
+                } else {
+                    // Other errors (e.g., JSON parsing, unexpected exceptions, etc.)
+                    message = "Unexpected error occurred";
+                }
 
+                // Display a Toast message for failure
+                Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
             }
         });
     }
+
 
 
 

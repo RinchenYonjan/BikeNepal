@@ -1,8 +1,6 @@
 package com.example.bikenepal.recyclerview;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -14,9 +12,9 @@ import com.example.bikenepal.R;
 
 public class RecyclerViewHolder extends RecyclerView.ViewHolder {
 
-    ImageView imageView;
-    TextView nameView, priceView, fuelView;
-    RelativeLayout urllink;
+    public ImageView imageView;
+    public TextView nameView, priceView, fuelView;
+    public RelativeLayout urllink;
     Context context;
 
 
