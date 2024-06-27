@@ -31,6 +31,7 @@ public class intro1Fragment extends Fragment {
         }
     }
 
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -48,6 +49,7 @@ public class intro1Fragment extends Fragment {
 
         return view;
     }
+
 
     private class GestureListener extends GestureDetector.SimpleOnGestureListener {
 
@@ -95,7 +97,6 @@ public class intro1Fragment extends Fragment {
                 mainIntroActivity.moveToNextFragment();
             }
         }
-
     }
 
 }

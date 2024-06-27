@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.LoginActivity"
-    android:background="@drawable/bmw">
+    android:background="@drawable/bmw1000rr">
 
     <!-- Creating image back button-->
     <ImageButton
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:text="Have not register yet? Register Here."
             android:fontFamily="@font/manrope_regular"
-            android:textColor="#212121"
+            android:textColor="#ffffff"
             android:textSize="16sp" />
 
     </LinearLayout>

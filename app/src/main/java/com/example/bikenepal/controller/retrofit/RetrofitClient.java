@@ -27,8 +27,6 @@ public class RetrofitClient extends AppCompatActivity {
     apiservice api = retrofit.create(apiservice.class);
 
 
-
-
     // Method on user register request and response
     public void userRegister(String username, String email, String phonenumber, String password) {
 

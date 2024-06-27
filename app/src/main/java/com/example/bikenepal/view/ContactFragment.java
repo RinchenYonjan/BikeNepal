@@ -40,6 +40,7 @@ public class ContactFragment extends Fragment {
         contactDescription = view.findViewById(R.id.contactdescription_text);
         sendButton = view.findViewById(R.id.contact_sendBtn);
 
+
         // Set click listener for send button
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,6 +51,7 @@ public class ContactFragment extends Fragment {
 
         return view;
     }
+
 
     private void sendContactMessage() {
         String username = contactName.getText().toString().trim();
@@ -62,7 +64,7 @@ public class ContactFragment extends Fragment {
 
             Toast.makeText(getContext().getApplicationContext(), "Fill is Required", Toast.LENGTH_LONG).show();
 
-        }
+        } else {
             // Creating RetrofitClient object to store Contact Page data
             RetrofitClient retrofitClientInstance = new RetrofitClient();
             retrofitClientInstance.contactSend(username, address, job, description);
@@ -70,7 +72,10 @@ public class ContactFragment extends Fragment {
             // Toast message
             Toast.makeText(getContext().getApplicationContext(), "Request message is Sent!", Toast.LENGTH_LONG).show();
             clearInputFields();
+        }
+
     }
+
 
     // Method to text field empty
     private void clearInputFields() {

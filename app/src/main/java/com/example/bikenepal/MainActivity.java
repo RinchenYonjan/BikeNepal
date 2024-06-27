@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         bottomNavigationView.setOnItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.home);
 
-
         // Check and request permissions
         requestPermissions();
 
@@ -56,7 +55,6 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         new Thread(new Runnable() {
             @Override
             public void run() {
-
                 try {
                     Thread.sleep(150000);
                 } catch (InterruptedException ea) {
@@ -141,8 +139,6 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
 
     private void onPermissionsGranted() {
         // Code to execute when the permissions are granted
-
     }
-
 
 }

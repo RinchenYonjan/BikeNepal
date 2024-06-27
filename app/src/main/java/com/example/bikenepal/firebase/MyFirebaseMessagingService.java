@@ -18,6 +18,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = "BikeFirebaseMessagingService";
     private static final String CHANNEL_ID = "BikeNotify";
 
+
     // Method message on received
     @Override
     public void onMessageReceived(@NonNull RemoteMessage remoteMessage) {
@@ -35,7 +36,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
             // Handle the notification payload here
             showNotification(remoteMessage.getNotification().getTitle(), remoteMessage.getNotification().getBody());
-
         }
     }
 
@@ -46,6 +46,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.d(TAG, "Refreshed token " + token);
 
     }
+
 
     // Method on showing notification details
     private void showNotification(String title, String body) {
@@ -70,15 +71,14 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 channel.setDescription(description);
 
                 notificationManager.createNotificationChannel(channel);
-
             }
 
             notificationManager.notify(0, builder.build());
 
         } else {
+
             // Handle case where getSystemService() returned null
             Log.e(TAG, "NotificationManager is null");
-
         }
     }
 

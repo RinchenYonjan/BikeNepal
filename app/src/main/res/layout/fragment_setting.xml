@@ -9,6 +9,7 @@
 
     <!-- Setting -->
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Setting"
@@ -30,14 +31,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <!-- Space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"/>
 
         <!-- Notification -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            
+
             <ImageButton
                 android:layout_width="34dp"
                 android:layout_height="34dp"
@@ -57,6 +66,14 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <!-- Space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"/>
 
         <!-- Terms and Conditions -->
         <LinearLayout
@@ -84,6 +101,14 @@
 
         </LinearLayout>
 
+        <!-- Space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"/>
+
         <!-- Dark and Light Model -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -109,6 +134,14 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <!-- Space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"/>
 
         <!-- Change Language -->
         <LinearLayout
@@ -136,6 +169,14 @@
 
         </LinearLayout>
 
+        <!-- Space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"/>
+
         <!-- Security Measure -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -162,6 +203,14 @@
 
         </LinearLayout>
 
+        <!-- Space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"/>
+
         <!-- Change Password -->
         <LinearLayout
             android:layout_width="match_parent"
@@ -187,6 +236,14 @@
                 android:textStyle="bold" />
 
         </LinearLayout>
+
+        <!-- Space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"/>
 
         <!-- Logout -->
         <LinearLayout
@@ -215,6 +272,13 @@
 
         </LinearLayout>
 
+        <!-- Space -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/white"
+            android:layout_below="@+id/imageView"
+            android:layout_marginTop="10dp"/>
 
     </LinearLayout>
 
