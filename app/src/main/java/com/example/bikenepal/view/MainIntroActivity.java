@@ -5,21 +5,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 import com.example.bikenepal.R;
-
+import com.example.bikenepal.adapter.IntroPagerAdapter;
+import me.relex.circleindicator.CircleIndicator;
 
 public class MainIntroActivity extends AppCompatActivity {
 
+    CircleIndicator indicator;
     Button skip_Btn;
     Button next_Btn;
-
-    intro1Fragment intro1 = new intro1Fragment();
-    intro2Fragment intro2 = new intro2Fragment();
-    intro3Fragment intro3 = new intro3Fragment();
-
-    // Track the current fragment
-    int currentFragment = 1;
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,68 +24,73 @@ public class MainIntroActivity extends AppCompatActivity {
 
         skip_Btn = findViewById(R.id.skip_text);
         next_Btn = findViewById(R.id.next_text);
+        viewPager = findViewById(R.id.viewPager);
+        indicator = findViewById(R.id.indicator);
 
-        // Load the first fragment initially
-        getSupportFragmentManager().beginTransaction().replace(R.id.container1, intro1).commit();
-
+        IntroPagerAdapter adapter = new IntroPagerAdapter(getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
+        indicator.setViewPager(viewPager);
 
         next_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveToNextFragment();
+                int nextItem = viewPager.getCurrentItem() + 1;
+                if (nextItem < adapter.getCount()) {
+                    viewPager.setCurrentItem(nextItem);
+                } else {
+                    moveToWelcomeActivity();
+                }
             }
         });
-
 
         skip_Btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainIntroActivity.this, WelcomeActivity.class);
-                startActivity(intent);
-                finish();
+                moveToWelcomeActivity();
             }
+        });
+
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
+
+            @Override
+            public void onPageSelected(int position) {
+                if (position == adapter.getCount() - 1) {
+                    next_Btn.setText("Finish");
+                } else {
+                    next_Btn.setText("Next");
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {}
         });
     }
 
 
     public void moveToNextFragment() {
-        Fragment nextFragment;
-        switch (currentFragment) {
-            case 1:
-                nextFragment = intro2;
-                currentFragment = 2;
-                break;
-            case 2:
-                nextFragment = intro3;
-                currentFragment = 3;
-                break;
-            case 3:
-                Intent intent = new Intent(MainIntroActivity.this, WelcomeActivity.class);
-                startActivity(intent);
-                finish();
-                return;
-            default:
-                return;
+        int nextItem = viewPager.getCurrentItem() + 1;
+        if (nextItem < viewPager.getAdapter().getCount()) {
+            viewPager.setCurrentItem(nextItem);
+        } else {
+            moveToWelcomeActivity();
         }
-        getSupportFragmentManager().beginTransaction().replace(R.id.container1, nextFragment).commit();
     }
 
 
     public void moveToPreviousFragment() {
-        Fragment previousFragment;
-        switch (currentFragment) {
-            case 2:
-                previousFragment = intro1;
-                currentFragment = 1;
-                break;
-            case 3:
-                previousFragment = intro2;
-                currentFragment = 2;
-                break;
-            default:
-                return;
+        int prevItem = viewPager.getCurrentItem() - 1;
+        if (prevItem >= 0) {
+            viewPager.setCurrentItem(prevItem);
         }
-        getSupportFragmentManager().beginTransaction().replace(R.id.container1, previousFragment).commit();
+    }
+
+
+    private void moveToWelcomeActivity() {
+        Intent intent = new Intent(MainIntroActivity.this, WelcomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 
 }

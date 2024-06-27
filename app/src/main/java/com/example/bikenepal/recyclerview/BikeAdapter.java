@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.bikenepal.R;
+import com.example.bikenepal.model.BikeModel;
 
 import java.util.List;
 

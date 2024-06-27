@@ -54,5 +54,6 @@ dependencies {
     implementation(platform("com.google.firebase:firebase-bom:33.0.0"))
     implementation("com.google.firebase:firebase-messaging:24.0.0")
     implementation ("androidx.recyclerview:recyclerview:1.3.2")
+    implementation ("me.relex:circleindicator:2.1.6")
 
 }

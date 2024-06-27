@@ -1,4 +1,4 @@
-package com.example.bikenepal.recyclerview;
+package com.example.bikenepal.model;
 
 public class BikeModel {
 

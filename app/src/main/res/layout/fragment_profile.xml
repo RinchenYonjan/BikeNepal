@@ -30,7 +30,7 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             app:shapeAppearance="@style/roundedImage"
-            android:src="@drawable/imageface"
+            android:src="@drawable/profileimage"
             android:scaleType="centerCrop"
             android:layout_margin="15dp"/>
 
@@ -68,7 +68,7 @@
             android:textSize="20dp"
             android:fontFamily="@font/manrope_bold"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="18dp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
 

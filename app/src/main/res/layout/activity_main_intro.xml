@@ -6,16 +6,24 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".view.MainIntroActivity"
-    android:padding="25dp"
     android:background="#1260cc">
 
-    <!-- frame layout -->
-    <FrameLayout
-        android:id="@+id/container1"
+    <!-- View Pager -->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        android:layout_height="match_parent"/>
+
+    <!-- Circle Indicator -->
+    <me.relex.circleindicator.CircleIndicator
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="150dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <!-- skip button -->
     <Button
@@ -28,6 +36,7 @@
         android:fontFamily="@font/manrope_semibold"
         android:textColor="#ffffff"
         android:background="@null"
+        android:layout_margin="25dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
@@ -42,6 +51,7 @@
         android:fontFamily="@font/manrope_semibold"
         android:textColor="#ffffff"
         android:background="@null"
+        android:layout_margin="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
