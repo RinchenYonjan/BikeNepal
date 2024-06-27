@@ -36,7 +36,6 @@
         <activity
             android:name=".view.WelcomeActivity"
             android:exported="false"
-            android:label="@string/title_activity_welcome"
             android:theme="@style/Theme.BikeNepal" />
         <activity
             android:name=".view.MainIntroActivity"

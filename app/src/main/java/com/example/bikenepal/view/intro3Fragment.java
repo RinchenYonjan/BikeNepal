@@ -1,6 +1,7 @@
 package com.example.bikenepal.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
@@ -82,10 +83,9 @@ public class intro3Fragment extends Fragment {
         }
 
         public void onSwipeRight() {
-            // Call method in MainIntroActivity to go to the previous fragment
-            if (mainIntroActivity != null) {
-                mainIntroActivity.moveToPreviousFragment();
-            }
+            Intent intent = new Intent(mainIntroActivity, WelcomeActivity.class);
+            startActivity(intent);
+            mainIntroActivity.finish();
         }
 
         public void onSwipeLeft() {

@@ -17,7 +17,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="45dp"
         android:text="Profile"
         android:fontFamily="@font/manrope_bold"
         android:textColor="#212121"
@@ -68,26 +68,26 @@
             android:textSize="20dp"
             android:fontFamily="@font/manrope_bold"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="15dp"
             android:textStyle="bold"
             android:textColor="@android:color/white"/>
 
-        <!-- Rinchen Yonjan -->
+        <!-- Bike Nepal LTD -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Rinchen Yonjan"
+            android:text="Bike Nepal LTD"
             android:fontFamily="@font/manrope_regular"
             android:textSize="16sp"
             android:layout_marginTop="5dp"
             android:layout_marginStart="30dp"
             android:textColor="@android:color/white"/>
 
-        <!-- Age -->
+        <!-- Released -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AGE"
+            android:text="Released"
             android:fontFamily="@font/manrope_bold"
             android:textSize="20dp"
             android:textColor="@android:color/white"
@@ -95,23 +95,23 @@
             android:layout_marginTop="15dp"
             android:layout_marginStart="30dp"/>
 
-        <!-- Null -->
+        <!-- date -->
         <TextView
             android:id="@+id/dateofbirth"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Unknown"
+            android:text="2024-01-05"
             android:fontFamily="@font/manrope_regular"
             android:textSize="16sp"
             android:textColor="@android:color/white"
             android:layout_marginStart="30dp"
             android:layout_marginTop="5dp"/>
 
-        <!-- Gender -->
+        <!-- Service -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="GENDER"
+            android:text="SERVICE"
             android:fontFamily="@font/manrope_bold"
             android:textColor="@android:color/white"
             android:textStyle="bold"
@@ -119,11 +119,11 @@
             android:layout_marginTop="15dp"
             android:layout_marginStart="30dp"/>
 
-        <!-- Male -->
+        <!-- online platform -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Male"
+            android:text="Online Platform"
             android:fontFamily="@font/manrope_regular"
             android:textSize="16sp"
             android:textColor="@android:color/white"
@@ -134,7 +134,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CURRENT ACTIVITY"
+            android:text="CURRENT AVAILABLE"
             android:fontFamily="@font/manrope_bold"
             android:textColor="@android:color/white"
             android:textStyle="bold"
@@ -146,7 +146,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bachelor"
+            android:text="Kathmandu, Nepal"
             android:fontFamily="@font/manrope_regular"
             android:textSize="16sp"
             android:textColor="@android:color/white"
@@ -169,7 +169,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Mobile Application Development"
+            android:text="Mobile Application"
             android:fontFamily="@font/manrope_regular"
             android:textSize="16sp"
             android:textColor="@android:color/white"
