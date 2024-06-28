@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -14,7 +15,16 @@ import com.example.bikenepal.R;
 
 public class SettingFragment extends Fragment {
 
-    LinearLayout exitButton;
+
+    LinearLayout exitButton, themeToggleButton;
+    private OnSettingFragmentInteractionListener mListener;
+    private boolean isInitialImage = true;
+
+
+    public interface OnSettingFragmentInteractionListener {
+        void onToggleTheme();
+    }
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,6 +44,17 @@ public class SettingFragment extends Fragment {
                     getActivity().finish(); //Closing fragment
                 }
                 Toast.makeText(getContext().getApplicationContext(), "Logging out!", Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+        themeToggleButton = view.findViewById(R.id.themeToggleButton);
+        themeToggleButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mListener != null) {
+                    mListener.onToggleTheme();
+                }
             }
         });
 

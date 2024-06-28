@@ -1,7 +1,9 @@
+// MainActivity.java
 package com.example.bikenepal;
 
-import android.content.Intent;
 import android.Manifest;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -9,8 +11,10 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
 import com.example.bikenepal.view.BikeFragment;
 import com.example.bikenepal.view.ContactFragment;
@@ -21,21 +25,15 @@ import com.example.bikenepal.view.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
+public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener, SettingFragment.OnSettingFragmentInteractionListener {
 
-public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener {
 
     BottomNavigationView bottomNavigationView;
-
     HomeFragment home = new HomeFragment();
-
     ProfileFragment profile = new ProfileFragment();
-
     BikeFragment bike = new BikeFragment();
-
     ContactFragment contact = new ContactFragment();
-
     SettingFragment setting = new SettingFragment();
-
     private static final int PERMISSION_REQUEST_CODE = 1;
 
 
@@ -47,92 +45,93 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         bottomNavigationView.setOnItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.home);
 
-        // Check and request permissions
-        requestPermissions();
+        // Load the preferred theme from SharedPreferences
+        SharedPreferences sharedPreferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
+        boolean isDarkMode = sharedPreferences.getBoolean("dark_mode", false);
 
+        if (isDarkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
 
-        // Wake up mobile screen till duration of 2.5 min otherwise redirect user to login activity
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(150000);
-                } catch (InterruptedException ea) {
-                    ea.printStackTrace();
-                }
-
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                        startActivity(intent);
-                    }
-                });
-            }
-        }).start();
-
+        // Load the default fragment
+        getSupportFragmentManager().beginTransaction().replace(R.id.container, home).commit();
     }
 
 
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        Fragment selectedFragment = null;
+
         if (item.getItemId() == R.id.home) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, home).commit();
-            return true;
-
+            selectedFragment = home;
         } else if (item.getItemId() == R.id.profile) {
-
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, profile).commit();
-            return true;
-
+            selectedFragment = profile;
         } else if (item.getItemId() == R.id.bike) {
-
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, bike).commit();
-            return true;
-
+            selectedFragment = bike;
         } else if (item.getItemId() == R.id.contact) {
-
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, contact).commit();
-            return true;
-
+            selectedFragment = contact;
         } else if (item.getItemId() == R.id.setting) {
-
-            getSupportFragmentManager().beginTransaction().replace(R.id.container, setting).commit();
-            return true;
-
+            selectedFragment = setting;
         }
 
+        if (selectedFragment != null) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.container, selectedFragment).commit();
+            return true;
+        }
         return false;
+    }
+
+
+    @Override
+    public void onToggleTheme() {
+        toggleTheme();
+    }
+
+
+    // Call this method to switch between dark mode and light mode
+    public void toggleTheme() {
+        SharedPreferences sharedPreferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        boolean isDarkMode = sharedPreferences.getBoolean("dark_mode", false);
+
+        if (isDarkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            editor.putBoolean("dark_mode", false);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            editor.putBoolean("dark_mode", true);
+        }
+
+        editor.apply();
+        recreate(); // Recreate activity to apply theme
     }
 
 
 
     private void requestPermissions() {
-
         boolean cameraPermissionGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
-
         boolean notificationPermissionGranted = true;
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {   // android 10 'Q' version
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             notificationPermissionGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED;
         }
 
         if (!cameraPermissionGranted || !notificationPermissionGranted) {
             String[] permissions;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {   // android 10 'Q' version
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
                 permissions = new String[]{Manifest.permission.CAMERA, Manifest.permission.POST_NOTIFICATIONS};
             } else {
                 permissions = new String[]{Manifest.permission.CAMERA};
             }
 
             ActivityCompat.requestPermissions(this, permissions, PERMISSION_REQUEST_CODE);
-
         } else {
             // Permissions already granted
             onPermissionsGranted();
         }
-
     }
 
 
@@ -140,5 +139,4 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
     private void onPermissionsGranted() {
         // Code to execute when the permissions are granted
     }
-
 }

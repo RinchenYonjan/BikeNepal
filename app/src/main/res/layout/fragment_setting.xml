@@ -108,14 +108,16 @@
             android:background="@color/white"
             android:layout_marginTop="10dp"/>
 
-        <!-- Dark and Light Model -->
+        <!-- Dark and Light Mode -->
         <LinearLayout
+            android:id="@+id/themeToggleButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:foreground="?attr/selectableItemBackground">
 
             <ImageButton
+                android:id="@+id/modeImage"
                 android:layout_width="34dp"
                 android:layout_height="34dp"
                 android:background="@android:color/transparent"
