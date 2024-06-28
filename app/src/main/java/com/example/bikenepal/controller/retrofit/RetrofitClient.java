@@ -138,9 +138,9 @@ public class RetrofitClient extends AppCompatActivity {
 
 
     // Method on contact message request and response
-    public void contactSend(String username, String address, String job, String description) {
+    public void contactSend(String company, String country, String name, String description) {
 
-        ContactModel contactModel = new ContactModel(username, address, job, description);
+        ContactModel contactModel = new ContactModel(company, country, name, description);
         Log.d("contact register", "Initiating contact user data..");
 
         Call<ContactModel> Contactcall = api.contact(contactModel);

@@ -58,9 +58,11 @@
             </intent-filter>
         </service>
 
+
         <meta-data
             android:name="com.google.firebase.messaging."
             android:value="notification" />
+
 
     </application>
 

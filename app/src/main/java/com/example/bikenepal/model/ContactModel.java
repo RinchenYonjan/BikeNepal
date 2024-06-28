@@ -4,53 +4,53 @@ import com.google.gson.annotations.SerializedName;
 
 public class ContactModel {
 
-    @SerializedName("username") // username name for JavaScript Object Notation(JASON) or other.
-    private String username;
+    @SerializedName("company") // username name for JavaScript Object Notation(JASON) or other.
+    private String company;
 
-    @SerializedName("address")  // address name for JavaScript Object Notation(JASON) or other.
-    private String address;
+    @SerializedName("country")  // address name for JavaScript Object Notation(JASON) or other.
+    private String country;
 
-    @SerializedName("job") // job name for JavaScript Object Notation(JASON) or other.
-    private String job;
+    @SerializedName("name") // job name for JavaScript Object Notation(JASON) or other.
+    private String name;
 
     @SerializedName("description") // description name for JavaScript Object Notation(JASON) or other.
     private String description;
 
     // Creating class constructor
-    public ContactModel(String username, String address , String job, String description) {
-        this.username = username;
-        this.address = address;
-        this.job = job;
+    public ContactModel(String company, String country, String name, String description) {
+        this.company = company;
+        this.country = country;
+        this.name = name;
         this.description = description;
     }
 
     // Getter method
-    public String getUsername() {
-        return username;
+    public String getCompany() {
+        return company;
     }
 
-    public String getAddress() {
-        return address;
+    public String getCountry() {
+        return country;
     }
 
-    public String getJob() {
-        return job;
+    public String getName() {
+        return name;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setUsername(String username){
-        this.username = username;
+    public void setCompany(String company){
+        this.company = company;
     }
 
-    public void setAddress(String address){
-        this.address = address;
+    public void setCountry(String country){
+        this.country = country;
     }
 
-    public void setJob(String job){
-        this.job = job;
+    public void setName(String name){
+        this.name = name;
     }
 
     public void setDescription(String description){

@@ -23,7 +23,7 @@ import retrofit2.Response;
 
 public class ContactFragment extends Fragment {
 
-    private EditText contactName, contactAddress, contactJob, contactDescription;
+    private EditText companyName, countryName, bikeName, Description;
     private Button sendButton;
 
 
@@ -34,10 +34,10 @@ public class ContactFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_contact, container, false);
 
         // Initialize views
-        contactName = view.findViewById(R.id.contactname_text);
-        contactAddress = view.findViewById(R.id.contactaddress_text);
-        contactJob = view.findViewById(R.id.job_text);
-        contactDescription = view.findViewById(R.id.contactdescription_text);
+        companyName = view.findViewById(R.id.companyname_text);
+        countryName = view.findViewById(R.id.countryname_text);
+        bikeName = view.findViewById(R.id.bikename_text);
+        Description = view.findViewById(R.id.description_text);
         sendButton = view.findViewById(R.id.contact_sendBtn);
 
 
@@ -54,20 +54,20 @@ public class ContactFragment extends Fragment {
 
 
     private void sendContactMessage() {
-        String username = contactName.getText().toString().trim();
-        String address = contactAddress.getText().toString().trim();
-        String job = contactJob.getText().toString().trim();
-        String description = contactDescription.getText().toString().trim();
+        String company = companyName.getText().toString().trim();
+        String country = countryName.getText().toString().trim();
+        String name = bikeName.getText().toString().trim();
+        String description = Description.getText().toString().trim();
 
         // Check if fields are empty or not
-        if(username.isEmpty() || address.isEmpty() || job.isEmpty() || description.isEmpty()) {
+        if(company.isEmpty() || country.isEmpty() || name.isEmpty() || description.isEmpty()) {
 
             Toast.makeText(getContext().getApplicationContext(), "Fill is Required", Toast.LENGTH_LONG).show();
 
         } else {
             // Creating RetrofitClient object to store Contact Page data
             RetrofitClient retrofitClientInstance = new RetrofitClient();
-            retrofitClientInstance.contactSend(username, address, job, description);
+            retrofitClientInstance.contactSend(company, country, name, description);
 
             // Toast message
             Toast.makeText(getContext().getApplicationContext(), "Request message is Sent!", Toast.LENGTH_LONG).show();
@@ -79,10 +79,10 @@ public class ContactFragment extends Fragment {
 
     // Method to text field empty
     private void clearInputFields() {
-        contactName.setText("");
-        contactAddress.setText("");
-        contactJob.setText("");
-        contactDescription.setText("");
+        companyName.setText("");
+        countryName.setText("");
+        bikeName.setText("");
+        Description.setText("");
     }
 
 }

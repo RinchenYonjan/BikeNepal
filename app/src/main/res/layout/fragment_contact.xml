@@ -36,41 +36,41 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:textSize="20sp"
-            android:text="How can we help you?"
+            android:text="Anything to know about bike"
             android:fontFamily="@font/manrope_regular"
             android:textColor="#212121"/>
 
-        <!-- Customer Name -->
+        <!-- Company Name -->
         <EditText
-            android:id="@+id/contactname_text"
+            android:id="@+id/companyname_text"
             android:layout_width="240dp"
             android:layout_height="48dp"
             android:textAlignment="center"
-            android:hint="Customer Name"
+            android:hint="Company Name"
             android:textSize="16sp"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="25dp"
             android:background="@drawable/custom_contact_editview"/>
 
-        <!-- Customer Address -->
+        <!-- Country Name -->
         <EditText
-            android:id="@+id/contactaddress_text"
+            android:id="@+id/countryname_text"
             android:layout_width="240dp"
             android:layout_height="48dp"
             android:textAlignment="center"
-            android:hint="Customer Address"
+            android:hint="Country Name"
             android:textSize="16sp"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="10dp"
             android:background="@drawable/custom_contact_editview" />
 
-        <!-- Job -->
+        <!-- Bike Name -->
         <EditText
-            android:id="@+id/job_text"
+            android:id="@+id/bikename_text"
             android:layout_width="240dp"
             android:layout_height="48dp"
             android:textAlignment="center"
-            android:hint="Job Description"
+            android:hint="Bike Name"
             android:textSize="16sp"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="25dp"
@@ -78,14 +78,14 @@
 
         <!-- Description -->
         <EditText
-            android:id="@+id/contactdescription_text"
+            android:id="@+id/description_text"
             android:layout_width="300dp"
             android:layout_height="200dp"
             android:background="@drawable/custom_describe_textview"
             android:layout_marginTop="15dp"
             android:gravity="top"
             android:padding="10dp"
-            android:hint="Anything want to ask?"
+            android:hint="want to ask about ?"
             android:textSize="16sp"
             android:fontFamily="@font/manrope_regular"/>
 
