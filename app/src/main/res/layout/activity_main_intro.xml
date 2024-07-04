@@ -38,7 +38,8 @@
         android:background="@null"
         android:layout_margin="25dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/BUTTON" />
 
     <!-- next button -->
     <Button
@@ -53,7 +54,8 @@
         android:background="@null"
         android:layout_margin="25dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/BUTTON" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

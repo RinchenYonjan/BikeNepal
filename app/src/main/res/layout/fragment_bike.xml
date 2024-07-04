@@ -15,7 +15,6 @@
         android:layout_margin="20dp"
         android:fontFamily="@font/manrope_extrabold"
         android:text="Latest Bike"
-        android:textColor="#212121"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

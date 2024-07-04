@@ -29,7 +29,6 @@
             android:fontFamily="@font/manrope_bold"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:textColor="#212121"
             style="@style/TEXT" />
 
         <!-- Heading h2 -->
@@ -40,7 +39,6 @@
             android:textSize="20sp"
             android:text="Anything to know about bike"
             android:fontFamily="@font/manrope_regular"
-            android:textColor="#212121"
             style="@style/TEXT" />
 
         <!-- Company Name -->
@@ -51,6 +49,7 @@
             android:textAlignment="center"
             android:hint="Bike Company"
             android:textSize="16sp"
+            android:textColorHint="#353535"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="25dp"
             android:background="@drawable/custom_contact_editview"
@@ -64,6 +63,7 @@
             android:textAlignment="center"
             android:hint="Bike Country"
             android:textSize="16sp"
+            android:textColorHint="#353535"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="10dp"
             android:background="@drawable/custom_contact_editview"
@@ -77,6 +77,7 @@
             android:textAlignment="center"
             android:hint="Bike Name"
             android:textSize="16sp"
+            android:textColorHint="#353535"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="25dp"
             android:background="@drawable/custom_contact_editview"
@@ -93,6 +94,7 @@
             android:padding="10dp"
             android:hint="What you want to ask ?"
             android:textSize="16sp"
+            android:textColorHint="#353535"
             android:fontFamily="@font/manrope_regular"
             style="@style/EDITTEXT" />
 

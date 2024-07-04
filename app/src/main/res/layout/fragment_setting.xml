@@ -15,7 +15,6 @@
         android:layout_height="wrap_content"
         android:text="Setting"
         android:fontFamily="@font/manrope_extrabold"
-        android:textColor="#212121"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
@@ -52,7 +51,7 @@
             <ImageButton
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="@android:color/transparent"
+                android:background="#FFF"
                 android:scaleType="centerCrop"
                 android:src="@drawable/notification"
                 android:layout_margin="15dp"/>
@@ -63,7 +62,6 @@
                 android:layout_gravity="center"
                 android:text="Notifications"
                 android:fontFamily="@font/manrope_bold"
-                android:textColor="#212121"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 style="@style/TEXT" />
@@ -87,7 +85,7 @@
             <ImageButton
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="@android:color/transparent"
+                android:background="#FFF"
                 android:scaleType="centerCrop"
                 android:src="@drawable/certification"
                 android:layout_margin="15dp" />
@@ -98,7 +96,6 @@
                 android:layout_gravity="center"
                 android:text="Terms and Conditions"
                 android:fontFamily="@font/manrope_bold"
-                android:textColor="#212121"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 style="@style/TEXT" />
@@ -131,7 +128,6 @@
                 android:layout_gravity="center"
                 android:text="Night Mode"
                 android:fontFamily="@font/manrope_bold"
-                android:textColor="#212121"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 style="@style/TEXT" />
@@ -155,7 +151,7 @@
             <ImageButton
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="@android:color/transparent"
+                android:background="#FFF"
                 android:scaleType="centerCrop"
                 android:src="@drawable/language"
                 android:layout_margin="15dp" />
@@ -166,7 +162,6 @@
                 android:layout_gravity="center"
                 android:text="Change Language"
                 android:fontFamily="@font/manrope_bold"
-                android:textColor="#212121"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 style="@style/TEXT" />
@@ -190,7 +185,7 @@
             <ImageButton
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="@android:color/transparent"
+                android:background="#FFF"
                 android:scaleType="centerCrop"
                 android:src="@drawable/security"
                 android:layout_margin="15dp" />
@@ -201,7 +196,6 @@
                 android:layout_gravity="center"
                 android:text="Security Measure"
                 android:fontFamily="@font/manrope_bold"
-                android:textColor="#212121"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 style="@style/TEXT" />
@@ -225,7 +219,7 @@
             <ImageButton
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="@android:color/transparent"
+                android:background="#FFF"
                 android:scaleType="centerCrop"
                 android:src="@drawable/password"
                 android:layout_margin="15dp" />
@@ -236,7 +230,6 @@
                 android:layout_gravity="center"
                 android:text="Change Password"
                 android:fontFamily="@font/manrope_bold"
-                android:textColor="#212121"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 style="@style/TEXT" />
@@ -261,7 +254,7 @@
             <ImageButton
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="@android:color/transparent"
+                android:background="#FFF"
                 android:scaleType="centerCrop"
                 android:src="@drawable/logout"
                 android:layout_margin="15dp" />
@@ -272,7 +265,6 @@
                 android:layout_gravity="center"
                 android:text="Logout"
                 android:fontFamily="@font/manrope_bold"
-                android:textColor="#212121"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 style="@style/TEXT" />

@@ -21,7 +21,6 @@
         android:layout_marginTop="45dp"
         android:text="Profile"
         android:fontFamily="@font/manrope_bold"
-        android:textColor="#212121"
         android:textSize="32sp"
         android:textStyle="bold"
         style="@style/TEXT" />
@@ -43,7 +42,6 @@
             android:layout_margin="15dp"
             android:text="Our personal information which helps you to get relevant information."
             android:fontFamily="@font/manrope_regular"
-            android:textColor="#212121"
             android:textSize="16sp"
             style="@style/TEXT" />
 

@@ -28,7 +28,6 @@
         android:text="Name"
         android:textSize="20sp"
         android:fontFamily="@font/manrope_bold"
-        android:textColor="#121212"
         android:layout_toEndOf="@+id/imageView"
         style="@style/TEXT" />
 
@@ -39,7 +38,6 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/imageView"
         android:layout_below="@id/name"
-        android:textColor="#808080"
         tools:text="Price"
         style="@style/TEXT" />
 
@@ -50,7 +48,6 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@+id/price"
         android:layout_below="@id/name"
-        android:textColor="#808080"
         tools:text="Fuel Tank"
         style="@style/TEXT" />
 
