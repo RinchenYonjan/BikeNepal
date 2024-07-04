@@ -19,13 +19,12 @@ import androidx.fragment.app.Fragment;
 import com.example.bikenepal.view.BikeFragment;
 import com.example.bikenepal.view.ContactFragment;
 import com.example.bikenepal.view.HomeFragment;
-import com.example.bikenepal.view.LoginActivity;
 import com.example.bikenepal.view.ProfileFragment;
 import com.example.bikenepal.view.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
-public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener, SettingFragment.OnSettingFragmentInteractionListener {
+public class MainActivity extends AppCompatActivity implements NavigationBarView.OnItemSelectedListener{
 
 
     BottomNavigationView bottomNavigationView;
@@ -44,19 +43,6 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.home);
-
-        // Load the preferred theme from SharedPreferences
-        SharedPreferences sharedPreferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
-        boolean isDarkMode = sharedPreferences.getBoolean("dark_mode", false);
-
-        if (isDarkMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
-
-        // Load the default fragment
-        getSupportFragmentManager().beginTransaction().replace(R.id.container, home).commit();
     }
 
 
@@ -82,31 +68,6 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
             return true;
         }
         return false;
-    }
-
-
-    @Override
-    public void onToggleTheme() {
-        toggleTheme();
-    }
-
-
-    // Call this method to switch between dark mode and light mode
-    public void toggleTheme() {
-        SharedPreferences sharedPreferences = getSharedPreferences("user_preferences", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        boolean isDarkMode = sharedPreferences.getBoolean("dark_mode", false);
-
-        if (isDarkMode) {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-            editor.putBoolean("dark_mode", false);
-        } else {
-            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-            editor.putBoolean("dark_mode", true);
-        }
-
-        editor.apply();
-        recreate(); // Recreate activity to apply theme
     }
 
 

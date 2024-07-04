@@ -5,7 +5,8 @@
     android:id="@+id/clMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ContactFragment" >
+    tools:context=".view.ContactFragment"
+    style="@style/SCREEN" >
 
     <!-- Creating linearlayout to align item in vertical order -->
     <LinearLayout
@@ -28,7 +29,8 @@
             android:fontFamily="@font/manrope_bold"
             android:textSize="32sp"
             android:textStyle="bold"
-            android:textColor="#212121"/>
+            android:textColor="#212121"
+            style="@style/TEXT" />
 
         <!-- Heading h2 -->
         <TextView
@@ -38,7 +40,8 @@
             android:textSize="20sp"
             android:text="Anything to know about bike"
             android:fontFamily="@font/manrope_regular"
-            android:textColor="#212121"/>
+            android:textColor="#212121"
+            style="@style/TEXT" />
 
         <!-- Company Name -->
         <EditText
@@ -46,11 +49,12 @@
             android:layout_width="240dp"
             android:layout_height="48dp"
             android:textAlignment="center"
-            android:hint="Company Name"
+            android:hint="Bike Company"
             android:textSize="16sp"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="25dp"
-            android:background="@drawable/custom_contact_editview"/>
+            android:background="@drawable/custom_contact_editview"
+            style="@style/EDITTEXT" />
 
         <!-- Country Name -->
         <EditText
@@ -58,11 +62,12 @@
             android:layout_width="240dp"
             android:layout_height="48dp"
             android:textAlignment="center"
-            android:hint="Country Name"
+            android:hint="Bike Country"
             android:textSize="16sp"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="10dp"
-            android:background="@drawable/custom_contact_editview" />
+            android:background="@drawable/custom_contact_editview"
+            style="@style/EDITTEXT" />
 
         <!-- Bike Name -->
         <EditText
@@ -74,7 +79,8 @@
             android:textSize="16sp"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="25dp"
-            android:background="@drawable/custom_contact_editview"/>
+            android:background="@drawable/custom_contact_editview"
+            style="@style/EDITTEXT" />
 
         <!-- Description -->
         <EditText
@@ -85,9 +91,10 @@
             android:layout_marginTop="15dp"
             android:gravity="top"
             android:padding="10dp"
-            android:hint="want to ask about ?"
+            android:hint="What you want to ask ?"
             android:textSize="16sp"
-            android:fontFamily="@font/manrope_regular"/>
+            android:fontFamily="@font/manrope_regular"
+            style="@style/EDITTEXT" />
 
         <!-- Send button -->
         <Button
@@ -99,7 +106,8 @@
             android:text="Send"
             android:textSize="16sp"
             android:fontFamily="@font/manrope_semibold"
-            android:textColor="@color/white" />
+            android:textColor="@color/white"
+            style="@style/BUTTON" />
 
 
     </LinearLayout>

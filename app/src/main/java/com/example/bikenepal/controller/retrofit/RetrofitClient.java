@@ -39,7 +39,6 @@ public class RetrofitClient extends AppCompatActivity {
         Call<UserModel> call = api.register(userModel);
         call.enqueue(new Callback<UserModel>() {
 
-
             // Method on response of user register
             @Override
             public void onResponse(Call<UserModel> call, Response<UserModel> response) {
@@ -89,6 +88,7 @@ public class RetrofitClient extends AppCompatActivity {
                     Intent intent = new Intent(activity, MainActivity.class);
                     activity.startActivity(intent);
                 } else {
+
                     Log.d("login", "Login request failed with response code: " + response.code());
 
                     // Check the response code and show appropriate message
@@ -102,8 +102,10 @@ public class RetrofitClient extends AppCompatActivity {
                     }
 
                     Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
+
                 }
             }
+
 
             // Method on failure of user login
             @Override
@@ -111,6 +113,7 @@ public class RetrofitClient extends AppCompatActivity {
                 // Log the request URL for debugging
                 Log.d("login", "Request URL: " + call.request().url());
                 Log.d("login", "Login request failed: " + t.getMessage());
+
 
                 String message;
                 if (t instanceof UnknownHostException) {

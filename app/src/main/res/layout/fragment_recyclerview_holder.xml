@@ -7,7 +7,8 @@
     tools:context=".recyclerview.RecyclerViewHolder"
     android:orientation="horizontal"
     android:layout_marginTop="10dp"
-    android:foreground="?attr/selectableItemBackground">
+    android:foreground="?attr/selectableItemBackground"
+    style="@style/SCREEN" >
 
     <!-- Bike Image -->
     <ImageView
@@ -28,7 +29,8 @@
         android:textSize="20sp"
         android:fontFamily="@font/manrope_bold"
         android:textColor="#121212"
-        android:layout_toEndOf="@+id/imageView"/>
+        android:layout_toEndOf="@+id/imageView"
+        style="@style/TEXT" />
 
     <!-- Price -->
     <TextView
@@ -38,7 +40,8 @@
         android:layout_toEndOf="@+id/imageView"
         android:layout_below="@id/name"
         android:textColor="#808080"
-        tools:text="Price" />
+        tools:text="Price"
+        style="@style/TEXT" />
 
     <!-- Fuel Tank -->
     <TextView
@@ -48,7 +51,8 @@
         android:layout_toEndOf="@+id/price"
         android:layout_below="@id/name"
         android:textColor="#808080"
-        tools:text="Fuel Tank" />
+        tools:text="Fuel Tank"
+        style="@style/TEXT" />
 
     <!-- Space -->
     <LinearLayout
@@ -56,7 +60,8 @@
         android:layout_height="2dp"
         android:background="@color/white"
         android:layout_below="@+id/imageView"
-        android:layout_marginTop="10dp"/>
+        android:layout_marginTop="10dp"
+        style="@style/TEXT" />
 
 </RelativeLayout>
 

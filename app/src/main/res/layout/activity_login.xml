@@ -46,7 +46,8 @@
             android:gravity="center"
             android:hint="@string/username"
             android:textSize="16sp"
-            android:fontFamily="@font/manrope_regular" />
+            android:fontFamily="@font/manrope_regular"
+            style="@style/EDITTEXT"/>
 
         <!-- password -->
         <EditText
@@ -57,7 +58,8 @@
             android:gravity="center"
             android:hint="@string/password"
             android:textSize="16sp"
-            android:fontFamily="@font/manrope_regular" />
+            android:fontFamily="@font/manrope_regular"
+            style="@style/EDITTEXT"/>
 
         <!-- Login button -->
         <Button
@@ -70,7 +72,8 @@
             android:textColor="@color/white"
             android:textAllCaps="false"
             android:fontFamily="@font/manrope_semibold"
-            android:background="@drawable/custom_login_btn"/>
+            android:background="@drawable/custom_login_btn"
+            style="@style/BUTTON"/>
 
         <!-- Have not register yet?-->
         <TextView

@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.SettingFragment"
-    android:layout_gravity="center">
+    android:layout_gravity="center"
+    style="@style/SCREEN" >
 
     <!-- Setting -->
     <TextView
@@ -20,7 +21,8 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TEXT" />
 
     <!-- linear layout -->
     <LinearLayout
@@ -63,7 +65,8 @@
                 android:fontFamily="@font/manrope_bold"
                 android:textColor="#212121"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="@style/TEXT" />
 
         </LinearLayout>
 
@@ -97,7 +100,8 @@
                 android:fontFamily="@font/manrope_bold"
                 android:textColor="#212121"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="@style/TEXT" />
 
         </LinearLayout>
 
@@ -110,30 +114,27 @@
 
         <!-- Dark and Light Mode -->
         <LinearLayout
-            android:id="@+id/themeToggleButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:foreground="?attr/selectableItemBackground">
 
-            <ImageButton
-                android:id="@+id/modeImage"
-                android:layout_width="34dp"
-                android:layout_height="34dp"
-                android:background="@android:color/transparent"
-                android:scaleType="centerCrop"
-                android:src="@drawable/light"
-                android:layout_margin="15dp" />
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/themeToggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Light Mode"
+                android:text="Night Mode"
                 android:fontFamily="@font/manrope_bold"
                 android:textColor="#212121"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="@style/TEXT" />
 
         </LinearLayout>
 
@@ -167,7 +168,8 @@
                 android:fontFamily="@font/manrope_bold"
                 android:textColor="#212121"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="@style/TEXT" />
 
         </LinearLayout>
 
@@ -201,7 +203,8 @@
                 android:fontFamily="@font/manrope_bold"
                 android:textColor="#212121"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="@style/TEXT" />
 
         </LinearLayout>
 
@@ -235,7 +238,8 @@
                 android:fontFamily="@font/manrope_bold"
                 android:textColor="#212121"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="@style/TEXT" />
 
         </LinearLayout>
 
@@ -270,7 +274,8 @@
                 android:fontFamily="@font/manrope_bold"
                 android:textColor="#212121"
                 android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                style="@style/TEXT" />
 
         </LinearLayout>
 

@@ -44,6 +44,7 @@ public class BikeFragment extends Fragment {
         bike.add(new BikeModel("Kawasaki H2R", "Price: RS 12,808,451", "Fuel Tank: 17L", R.drawable.kawasakih2r, "https://www.kawasaki.com/en-us/motorcycle/ninja/hypersport/ninja-h2r"));
         bike.add(new BikeModel("Aprilla RSV4 1100", "Price: RS 5,011,137", "Fuel Tank: 17.9L", R.drawable.aprillars4, "https://www.aprilia.com/en_EN/models/rsv4/rsv4-factory-1100-4s4v-2023/"));
         bike.add(new BikeModel("TVS RTR200 4V", "Price: RS 4,24,900", "Fuel Tank: 12L", R.drawable.tvsrtr200, "https://tvsnepal.com/product/apache-rtr-200-4v-bs6"));
+        bike.add(new BikeModel("Ducati Panigale V4", "Price: RS 47,00,000", "Fuel Tank: 17L", R.drawable.ducatipanigalev4, "https://ducatiasiapacific.com/nepal/model/new-panigale-v4/"));
 
 
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

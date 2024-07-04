@@ -50,7 +50,8 @@
             android:gravity="center"
             android:hint="@string/username"
             android:textSize="16sp"
-            android:fontFamily="@font/manrope_regular"  />
+            android:fontFamily="@font/manrope_regular"
+            style="@style/EDITTEXT" />
 
         <!-- Email -->
         <EditText
@@ -62,7 +63,8 @@
             android:gravity="center"
             android:hint="Email"
             android:textSize="16sp"
-            android:fontFamily="@font/manrope_regular"  />
+            android:fontFamily="@font/manrope_regular"
+            style="@style/EDITTEXT" />
 
         <!-- Phone number -->
         <EditText
@@ -74,7 +76,8 @@
             android:gravity="center"
             android:hint="Phone Number"
             android:textSize="16sp"
-            android:fontFamily="@font/manrope_regular"  />
+            android:fontFamily="@font/manrope_regular"
+            style="@style/EDITTEXT" />
 
         <!-- Password -->
         <EditText
@@ -86,7 +89,8 @@
             android:gravity="center"
             android:hint="Password"
             android:textSize="16sp"
-            android:fontFamily="@font/manrope_regular"  />
+            android:fontFamily="@font/manrope_regular"
+            style="@style/EDITTEXT" />
 
 
         <!-- Creating horizontal linear layout -->
@@ -126,7 +130,8 @@
             android:textSize="16sp"
             android:textColor="@color/white"
             android:fontFamily="@font/manrope_semibold"
-            android:textAllCaps="false" />
+            android:textAllCaps="false"
+            style="@style/BUTTON" />
 
         <!-- Caption -->
         <TextView

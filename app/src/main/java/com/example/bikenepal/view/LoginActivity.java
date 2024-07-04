@@ -67,7 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         String password = passwordlogin.getText().toString().trim();
 
         if (username.isEmpty() || password.isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Username and Password are required", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Username and Password are required", Toast.LENGTH_SHORT).show();
         } else {
             // Create RetrofitClient instance and attempt login
             RetrofitClient retrofitClient = new RetrofitClient();

@@ -46,7 +46,8 @@
             android:textColor="#ffffff"
             android:fontFamily="@font/manrope_semibold"
             android:textSize="16sp"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            style="@style/BUTTON" />
 
 
         <!-- Register button -->
@@ -60,7 +61,8 @@
             android:text="Register"
             android:textSize="16sp"
             android:textColor="#ffffff"
-            android:textAllCaps="false"/>
+            android:textAllCaps="false"
+            style="@style/BUTTON" />
 
     </LinearLayout>
 
