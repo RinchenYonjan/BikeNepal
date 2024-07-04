@@ -17,7 +17,8 @@
         android:text="Latest Bike"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TEXT"/>
 
     <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
