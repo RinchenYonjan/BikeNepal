@@ -8,6 +8,7 @@ import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,8 +44,10 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
         bottomNavigationView = findViewById(R.id.bottomNavigationView);
         bottomNavigationView.setOnItemSelectedListener(this);
         bottomNavigationView.setSelectedItemId(R.id.home);
-    }
 
+        // Request permissions
+        requestNotificationPermission();
+    }
 
 
     @Override
@@ -71,33 +74,48 @@ public class MainActivity extends AppCompatActivity implements NavigationBarView
     }
 
 
-
-    private void requestPermissions() {
-        boolean cameraPermissionGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
+    private void requestNotificationPermission() {
         boolean notificationPermissionGranted = true;
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) { // Android 13 and above
             notificationPermissionGranted = ContextCompat.checkSelfPermission(this, Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED;
         }
 
-        if (!cameraPermissionGranted || !notificationPermissionGranted) {
-            String[] permissions;
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                permissions = new String[]{Manifest.permission.CAMERA, Manifest.permission.POST_NOTIFICATIONS};
-            } else {
-                permissions = new String[]{Manifest.permission.CAMERA};
-            }
-
+        if (!notificationPermissionGranted) {
+            String[] permissions = new String[]{Manifest.permission.POST_NOTIFICATIONS};
             ActivityCompat.requestPermissions(this, permissions, PERMISSION_REQUEST_CODE);
-        } else {
-            // Permissions already granted
-            onPermissionsGranted();
         }
     }
 
 
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
 
-    private void onPermissionsGranted() {
-        // Code to execute when the permissions are granted
+        if (requestCode == PERMISSION_REQUEST_CODE) {
+            boolean notificationPermissionGranted = true;
+
+            for (int i = 0; i < permissions.length; i++) {
+                if (permissions[i].equals(Manifest.permission.POST_NOTIFICATIONS) && grantResults[i] != PackageManager.PERMISSION_GRANTED) {
+                    notificationPermissionGranted = false;
+                    break;
+                }
+            }
+
+            if (notificationPermissionGranted) {
+                // onNotificationPermissionGranted();
+            } else {
+                Toast.makeText(this, "Notification permission is required for this app to function correctly", Toast.LENGTH_LONG).show();
+            }
+        }
     }
+
+
+    private void onNotificationPermissionGranted() {
+        // Code to execute when the permission is granted
+        Toast.makeText(this, "Notification permissions granted!", Toast.LENGTH_SHORT).show();
+    }
+
 }
+
+

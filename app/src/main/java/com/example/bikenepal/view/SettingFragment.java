@@ -2,26 +2,34 @@ package com.example.bikenepal.view;
 
 import static android.content.Context.MODE_PRIVATE;
 
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import com.example.bikenepal.R;
 
 public class SettingFragment extends Fragment {
 
-    LinearLayout exitButton;
+    LinearLayout NotificationButton, TermsConditionButton, ChangeLanguageButton, SecurityMeasureButton, ChangePasswordButton, LogoutButton;
+    ImageButton imageButton;
     private static final String PREFS_NAME = "theme_prefs";
     private static final String KEY_THEME = "theme";
+    private static final String KEY_NOTIFICATIONS_ENABLED = "notifications_enabled";
+    private static final String FRAGMENT_TAG = "SettingFragment";
+    private boolean isDefaultImage;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,20 +57,39 @@ public class SettingFragment extends Fragment {
         switchDarkMode.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-                } else {
-                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-                }
+                if (getActivity() != null) {
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putBoolean(KEY_THEME, isChecked);
+                    editor.apply();
 
-                SharedPreferences.Editor editor = preferences.edit();
-                editor.putBoolean(KEY_THEME, isChecked);
-                editor.apply();
+                    // Set the theme and recreate activity
+                    AppCompatDelegate.setDefaultNightMode(isChecked ? AppCompatDelegate.MODE_NIGHT_YES : AppCompatDelegate.MODE_NIGHT_NO);
+
+                    // Recreate the fragment
+                    FragmentManager fragmentManager = getParentFragmentManager();
+                    fragmentManager.beginTransaction()
+                            .replace(R.id.container, new SettingFragment(), FRAGMENT_TAG)
+                            .commit();
+                }
             }
         });
 
-        exitButton = view.findViewById(R.id.layoutlogout);
-        exitButton.setOnClickListener(new View.OnClickListener() {
+        // Notification
+        NotificationButton = view.findViewById(R.id.layoutNotification);
+        imageButton = view.findViewById(R.id.imagebutton);
+        isDefaultImage = preferences.getBoolean(KEY_NOTIFICATIONS_ENABLED, true);
+        updateNotificationButtonImage();
+
+        NotificationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                toggleNotifications();
+            }
+        });
+
+        // Logout
+        LogoutButton = view.findViewById(R.id.layoutLogout);
+        LogoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (getActivity() != null) {
@@ -73,5 +100,54 @@ public class SettingFragment extends Fragment {
         });
 
         return view;
+    }
+
+    // Method to update the notification button image
+    private void updateNotificationButtonImage() {
+        if (isDefaultImage) {
+            imageButton.setImageResource(R.drawable.notification);
+        } else {
+            imageButton.setImageResource(R.drawable.notificationcancel);
+        }
+    }
+
+    // turnOffNotification Method
+    private void turnOffNotifications() {
+        // Cancel all notifications and store their state
+        NotificationManager notificationManager = (NotificationManager) requireContext().getSystemService(Context.NOTIFICATION_SERVICE);
+        if (notificationManager != null) {
+            SharedPreferences preferences = requireContext().getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+            SharedPreferences.Editor editor = preferences.edit();
+            editor.putBoolean(KEY_NOTIFICATIONS_ENABLED, false);
+            editor.apply();
+
+            notificationManager.cancelAll();
+            Toast.makeText(requireContext(), "Notifications turned off", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // turnOnNotification Method
+    private void turnOnNotifications() {
+        // Show a toast for demonstration purposes.
+        SharedPreferences preferences = requireContext().getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putBoolean(KEY_NOTIFICATIONS_ENABLED, true);
+        editor.apply();
+
+        Toast.makeText(requireContext(), "Notifications turned on", Toast.LENGTH_SHORT).show();
+    }
+
+    // toggleNotifications Method
+    private void toggleNotifications() {
+        SharedPreferences preferences = requireContext().getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        boolean notificationsEnabled = preferences.getBoolean(KEY_NOTIFICATIONS_ENABLED, true);
+
+        if (notificationsEnabled) {
+            turnOffNotifications();
+        } else {
+            turnOnNotifications();
+        }
+        isDefaultImage = !notificationsEnabled;
+        updateNotificationButtonImage();
     }
 }

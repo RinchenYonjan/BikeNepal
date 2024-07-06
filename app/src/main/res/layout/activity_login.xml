@@ -45,6 +45,7 @@
             android:background="@drawable/custom_edit_view"
             android:gravity="center"
             android:hint="@string/username"
+            android:textColorHint="#353535"
             android:textSize="16sp"
             android:fontFamily="@font/manrope_regular"
             style="@style/EDITTEXT"/>
@@ -57,6 +58,7 @@
             android:background="@drawable/custom_edit_view"
             android:gravity="center"
             android:hint="@string/password"
+            android:textColorHint="#353535"
             android:textSize="16sp"
             android:fontFamily="@font/manrope_regular"
             style="@style/EDITTEXT"/>

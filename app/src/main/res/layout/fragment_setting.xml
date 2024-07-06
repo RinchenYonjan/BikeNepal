@@ -43,12 +43,13 @@
 
         <!-- Notification -->
         <LinearLayout
+            android:id="@+id/layoutNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:foreground="?attr/selectableItemBackground">
+            android:orientation="horizontal" >
 
             <ImageButton
+                android:id="@+id/imagebutton"
                 android:layout_width="34dp"
                 android:layout_height="34dp"
                 android:background="#FFF"
@@ -77,6 +78,7 @@
 
         <!-- Terms and Conditions -->
         <LinearLayout
+            android:id="@+id/layoutTermsConditon"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -143,6 +145,7 @@
 
         <!-- Change Language -->
         <LinearLayout
+            android:id="@+id/layoutChangeLanguage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -177,6 +180,7 @@
 
         <!-- Security Measure -->
         <LinearLayout
+            android:id="@+id/layoutSecurityMeasure"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -211,10 +215,10 @@
 
         <!-- Change Password -->
         <LinearLayout
+            android:id="@+id/layoutChangePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:foreground="?attr/selectableItemBackground">
+            android:orientation="horizontal" >
 
             <ImageButton
                 android:layout_width="34dp"
@@ -245,7 +249,7 @@
 
         <!-- Logout -->
         <LinearLayout
-            android:id="@+id/layoutlogout"
+            android:id="@+id/layoutLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"

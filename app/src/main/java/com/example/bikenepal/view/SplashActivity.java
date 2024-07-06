@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.bikenepal.R;
 
-public class Splash extends AppCompatActivity {
+public class SplashActivity extends AppCompatActivity {
 
     ImageView icon;
 
@@ -35,9 +35,9 @@ public class Splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(Splash.this, MainIntroActivity.class);
+                Intent intent = new Intent(SplashActivity.this, MainIntroActivity.class);
                 startActivity(intent);
-                finish(); // Finish Splash activity to prevent going back to it
+                finish(); // Finish SplashActivity activity to prevent going back to it
             }
         }, 2000);   //1.5 sec
     }
