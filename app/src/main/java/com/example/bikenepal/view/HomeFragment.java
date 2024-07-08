@@ -28,7 +28,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         ContactFragment contact = new ContactFragment(); //creating contactFragment object
         FragmentManager fragmentManager = getParentFragmentManager(); //creating fragmentManager object
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction(); //to take from one screen to another
-        fragmentTransaction.replace(R.id.container, contact); //replacing homeFragment to contactFragment using activity file(id)
+        fragmentTransaction.replace(R.id.fragment_container, contact); //replacing homeFragment to contactFragment using activity file(id)
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit(); //transaction of screen successful
     }

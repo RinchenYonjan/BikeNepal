@@ -4,13 +4,14 @@ import static android.content.Context.MODE_PRIVATE;
 
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
-import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -23,8 +24,7 @@ import com.example.bikenepal.R;
 
 public class SettingFragment extends Fragment {
 
-    LinearLayout NotificationButton, TermsConditionButton, ChangeLanguageButton, SecurityMeasureButton, ChangePasswordButton, LogoutButton;
-    ImageButton imageButton;
+    private ImageView imageView;
     private static final String PREFS_NAME = "theme_prefs";
     private static final String KEY_THEME = "theme";
     private static final String KEY_NOTIFICATIONS_ENABLED = "notifications_enabled";
@@ -68,15 +68,15 @@ public class SettingFragment extends Fragment {
                     // Recreate the fragment
                     FragmentManager fragmentManager = getParentFragmentManager();
                     fragmentManager.beginTransaction()
-                            .replace(R.id.container, new SettingFragment(), FRAGMENT_TAG)
+                            .replace(R.id.fragment_container, new SettingFragment(), FRAGMENT_TAG)
                             .commit();
                 }
             }
         });
 
         // Notification
-        NotificationButton = view.findViewById(R.id.layoutNotification);
-        imageButton = view.findViewById(R.id.imagebutton);
+        LinearLayout NotificationButton = view.findViewById(R.id.layoutNotification);
+        imageView = view.findViewById(R.id.imageNotification);
         isDefaultImage = preferences.getBoolean(KEY_NOTIFICATIONS_ENABLED, true);
         updateNotificationButtonImage();
 
@@ -87,8 +87,18 @@ public class SettingFragment extends Fragment {
             }
         });
 
+        // Change Language
+        LinearLayout changelanguage = view.findViewById(R.id.layoutChangeLanguage);
+        changelanguage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), LanguageActivity.class);
+                startActivity(intent);
+            }
+        });
+
         // Logout
-        LogoutButton = view.findViewById(R.id.layoutLogout);
+        LinearLayout LogoutButton = view.findViewById(R.id.layoutLogout);
         LogoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -105,9 +115,9 @@ public class SettingFragment extends Fragment {
     // Method to update the notification button image
     private void updateNotificationButtonImage() {
         if (isDefaultImage) {
-            imageButton.setImageResource(R.drawable.notification);
+            imageView.setImageResource(R.drawable.notification);
         } else {
-            imageButton.setImageResource(R.drawable.notificationcancel);
+            imageView.setImageResource(R.drawable.notificationoff);
         }
     }
 

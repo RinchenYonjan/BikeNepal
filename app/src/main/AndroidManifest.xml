@@ -22,9 +22,6 @@
 
 
         <activity
-            android:name=".view.BikeFragment"
-            android:exported="false" />
-        <activity
             android:name=".view.SplashActivity"
             android:exported="true">
             <intent-filter>
@@ -47,6 +44,12 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SettingFragment"
+            android:exported="false" />
+        <activity
+            android:name=".view.LanguageActivity"
             android:exported="false" />
 
         <service

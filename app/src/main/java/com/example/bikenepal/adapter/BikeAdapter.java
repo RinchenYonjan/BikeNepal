@@ -21,14 +21,21 @@ import java.util.List;
 public class BikeAdapter extends RecyclerView.Adapter<RecyclerViewHolder> {
 
 
-    Context context;
-    List<BikeModel> bikelist;
+    private Context context;
+    private List<BikeModel> bikelist;
 
 
     // Creating class constructor
     public BikeAdapter(Context context, List<BikeModel> bikelist) {
         this.context = context;
         this.bikelist = bikelist;
+    }
+
+
+    // setFilteredList Method
+    public void setFilteredList(List<BikeModel> filteredList) {
+        this.bikelist = filteredList;
+        notifyDataSetChanged();
     }
 
 

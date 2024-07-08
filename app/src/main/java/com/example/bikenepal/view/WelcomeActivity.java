@@ -13,17 +13,13 @@ import com.example.bikenepal.R;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-    TextView welcome_title;
-    Button loginpage;
-    Button registerpage;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
         // Initialize the TextView
-        welcome_title = findViewById(R.id.welcometitle);
+        TextView welcome_title = findViewById(R.id.welcometitle);
 
 
         // Fading animation
@@ -35,7 +31,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
 
         // redirect to login screen
-        loginpage = findViewById(R.id.login_page);
+        Button loginpage = findViewById(R.id.login_page);
         loginpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,7 +42,7 @@ public class WelcomeActivity extends AppCompatActivity {
 
 
         // redirect to register screen
-        registerpage = findViewById(R.id.register_page);
+        Button registerpage = findViewById(R.id.register_page);
         registerpage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

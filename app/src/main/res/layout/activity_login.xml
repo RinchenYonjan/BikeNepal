@@ -7,13 +7,13 @@
     tools:context=".view.LoginActivity"
     android:background="@drawable/bmw1000rr">
 
-    <!-- Creating image back button-->
+    <!-- Creating image back1 button-->
     <ImageButton
         android:id="@+id/back_button"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:layout_margin="10dp"
-        android:src="@drawable/back"
+        android:src="@drawable/loginback"
         android:background="@android:color/transparent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -75,6 +75,7 @@
             android:textAllCaps="false"
             android:fontFamily="@font/manrope_semibold"
             android:background="@drawable/custom_login_btn"
+            android:foreground="?attr/selectableItemBackground"
             style="@style/BUTTON"/>
 
         <!-- Have not register yet?-->

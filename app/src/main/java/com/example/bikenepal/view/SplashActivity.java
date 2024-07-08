@@ -12,7 +12,6 @@ import com.example.bikenepal.R;
 
 public class SplashActivity extends AppCompatActivity {
 
-    ImageView icon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +20,7 @@ public class SplashActivity extends AppCompatActivity {
 
 
         // Initialize the TextView
-        icon = findViewById(R.id.image_icon);
+        ImageView icon = findViewById(R.id.image_icon);
 
         // Fading animation
         ObjectAnimator fadeOut = ObjectAnimator.ofFloat(icon, "alpha", 1f, 0f);
@@ -37,7 +36,7 @@ public class SplashActivity extends AppCompatActivity {
             public void run() {
                 Intent intent = new Intent(SplashActivity.this, MainIntroActivity.class);
                 startActivity(intent);
-                finish(); // Finish SplashActivity activity to prevent going back to it
+                finish(); // Finish SplashActivity activity to prevent going back1 to it
             }
         }, 2000);   //1.5 sec
     }

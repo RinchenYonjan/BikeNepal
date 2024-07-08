@@ -1,41 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.ContactFragment"
+    android:gravity="center"
+    android:background="#1aaa"
+    android:orientation="vertical"
     style="@style/SCREEN" >
 
-    <!-- Creating linearlayout to align item in vertical order -->
-    <LinearLayout
-        android:id="@+id/llForm"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#1aaa"
-        android:orientation="vertical"
-        app:layout_constraintStart_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="parent"
-        android:gravity="center">
-
-        <!-- Heading h1 -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Contact"
-            android:fontFamily="@font/manrope_bold"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            style="@style/TEXT" />
+    <!-- Heading h1 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact"
+        android:fontFamily="@font/manrope_extrabold"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        style="@style/TEXT" />
 
         <!-- Heading h2 -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:textSize="20sp"
             android:text="Anything to know about bike"
             android:fontFamily="@font/manrope_regular"
@@ -112,8 +106,7 @@
             style="@style/BUTTON" />
 
 
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
 
 

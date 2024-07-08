@@ -94,7 +94,7 @@ public class MainIntroActivity extends AppCompatActivity {
 
 
     private void moveToWelcomeActivity() {
-        Intent intent = new Intent(MainIntroActivity.this, WelcomeActivity.class);
+        Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
         startActivity(intent);
         finish();
     }

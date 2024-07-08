@@ -15,9 +15,9 @@
         android:layout_height="wrap_content"
         android:text="Setting"
         android:fontFamily="@font/manrope_extrabold"
-        android:textSize="32sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        android:layout_margin="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -32,13 +32,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/title">
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        style="@style/BACKGROUND" >
 
         <!-- Space -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/white"
             android:layout_marginTop="10dp"/>
 
         <!-- Notification -->
@@ -46,14 +46,13 @@
             android:id="@+id/layoutNotification"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackground" >
 
-            <ImageButton
-                android:id="@+id/imagebutton"
+            <ImageView
+                android:id="@+id/imageNotification"
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="#FFF"
-                android:scaleType="centerCrop"
                 android:src="@drawable/notification"
                 android:layout_margin="15dp"/>
 
@@ -73,7 +72,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/white"
             android:layout_marginTop="10dp"/>
 
         <!-- Terms and Conditions -->
@@ -82,14 +80,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground" >
 
-            <ImageButton
+            <ImageView
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="#FFF"
+                android:background="@null"
                 android:scaleType="centerCrop"
-                android:src="@drawable/certification"
+                android:src="@drawable/license"
                 android:layout_margin="15dp" />
 
             <TextView
@@ -108,7 +106,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/white"
             android:layout_marginTop="10dp"/>
 
         <!-- Dark and Light Mode -->
@@ -116,7 +113,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground" >
 
             <androidx.appcompat.widget.SwitchCompat
                 android:id="@+id/themeToggleButton"
@@ -140,7 +137,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/white"
             android:layout_marginTop="10dp"/>
 
         <!-- Change Language -->
@@ -151,11 +147,11 @@
             android:orientation="horizontal"
             android:foreground="?attr/selectableItemBackground">
 
-            <ImageButton
+            <ImageView
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="#FFF"
                 android:scaleType="centerCrop"
+                android:background="@null"
                 android:src="@drawable/language"
                 android:layout_margin="15dp" />
 
@@ -175,7 +171,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/white"
             android:layout_marginTop="10dp"/>
 
         <!-- Security Measure -->
@@ -189,7 +184,7 @@
             <ImageButton
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="#FFF"
+                android:background="@null"
                 android:scaleType="centerCrop"
                 android:src="@drawable/security"
                 android:layout_margin="15dp" />
@@ -210,7 +205,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/white"
             android:layout_marginTop="10dp"/>
 
         <!-- Change Password -->
@@ -218,12 +212,13 @@
             android:id="@+id/layoutChangePassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal" >
+            android:orientation="horizontal"
+            android:foreground="?attr/selectableItemBackground" >
 
             <ImageButton
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="#FFF"
+                android:background="@null"
                 android:scaleType="centerCrop"
                 android:src="@drawable/password"
                 android:layout_margin="15dp" />
@@ -244,7 +239,6 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/white"
             android:layout_marginTop="10dp"/>
 
         <!-- Logout -->
@@ -253,12 +247,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:foreground="?attr/selectableItemBackground">
+            android:foreground="?attr/selectableItemBackground" >
 
-            <ImageButton
+            <ImageView
                 android:layout_width="34dp"
                 android:layout_height="34dp"
-                android:background="#FFF"
+                android:background="@null"
                 android:scaleType="centerCrop"
                 android:src="@drawable/logout"
                 android:layout_margin="15dp" />
@@ -279,8 +273,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="2dp"
-            android:background="@color/white"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp" />
 
     </LinearLayout>
 

@@ -10,6 +10,11 @@
         <item name="android:background">#FFF</item>
     </style>
 
+    <!-- Background color if light mode on -->
+    <style name="BACKGROUND">
+        <item name="android:background">#FFF</item>
+    </style>
+
     <!-- Edit Text background color if light mode on -->
     <style name="EDITTEXT">
         <item name="android:background">#FFF</item>

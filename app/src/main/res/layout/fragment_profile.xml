@@ -1,56 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.ProfileFragment"
+    android:orientation="vertical"
+    android:gravity="center"
     style="@style/SCREEN">
 
-    <!-- Linear layout -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
-
-        <!-- Personal Information H1-->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="45dp"
-            android:text="Profile"
-            android:fontFamily="@font/manrope_bold"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            style="@style/TEXT" />
+    <!-- Profile -->
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:fontFamily="@font/manrope_extrabold"
+        android:text="Profile"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
         <!-- Ellipse image -->
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/displayImageView"
             android:layout_width="150dp"
             android:layout_height="150dp"
-            app:shapeAppearance="@style/roundedImage"
-            android:src="@drawable/profileimage"
+            android:layout_margin="10dp"
             android:scaleType="centerCrop"
-            android:layout_margin="15dp" />
+            android:src="@drawable/profileimage"
+            app:shapeAppearance="@style/roundedImage" />
 
         <!-- Heading H2 -->
         <TextView
+            style="@style/TEXT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:text="Our personal information which helps you to get relevant information."
             android:fontFamily="@font/manrope_regular"
-            android:textSize="16sp"
-            style="@style/TEXT" />
+            android:text="Our personal information which helps you to get relevant information."
+            android:textSize="16sp" />
 
         <!-- Card view -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:cardCornerRadius="25dp"
             android:layout_margin="4dp"
+            app:cardCornerRadius="25dp"
             app:cardElevation="10dp">
 
             <!-- ScrollView with LinearLayout inside -->
@@ -69,117 +68,117 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="FULL NAME"
-                        android:textSize="20sp"
-                        android:fontFamily="@font/manrope_bold"
                         android:layout_marginStart="30dp"
                         android:layout_marginTop="15dp"
-                        android:textStyle="bold"
-                        android:textColor="@android:color/white" />
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="FULL NAME"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <!-- Bike Nepal LTD -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Bike Nepal L.T.D"
-                        android:fontFamily="@font/manrope_regular"
-                        android:textSize="16sp"
-                        android:layout_marginTop="5dp"
                         android:layout_marginStart="30dp"
-                        android:textColor="@android:color/white" />
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/manrope_regular"
+                        android:text="Bike Nepal L.T.D"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
 
                     <!-- Released -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Released"
-                        android:fontFamily="@font/manrope_bold"
-                        android:textSize="20sp"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"
+                        android:layout_marginStart="30dp"
                         android:layout_marginTop="15dp"
-                        android:layout_marginStart="30dp" />
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="Released"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <!-- Date -->
                     <TextView
                         android:id="@+id/dateofbirth"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2024-01-05"
-                        android:fontFamily="@font/manrope_regular"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/white"
                         android:layout_marginStart="30dp"
-                        android:layout_marginTop="5dp" />
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/manrope_regular"
+                        android:text="2024-01-05"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
 
                     <!-- Service -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="SERVICE"
-                        android:fontFamily="@font/manrope_bold"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:layout_marginStart="30dp"
                         android:layout_marginTop="15dp"
-                        android:layout_marginStart="30dp" />
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="SERVICE"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <!-- Online platform -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Online Platform"
-                        android:fontFamily="@font/manrope_regular"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/white"
                         android:layout_marginStart="30dp"
-                        android:layout_marginTop="5dp" />
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/manrope_regular"
+                        android:text="Online Platform"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
 
                     <!-- Current Activity -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="CURRENT AVAILABLE"
-                        android:fontFamily="@font/manrope_bold"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:layout_marginStart="30dp"
                         android:layout_marginTop="15dp"
-                        android:layout_marginStart="30dp" />
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="CURRENT AVAILABLE"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <!-- Bachelor -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kathmandu, Nepal"
-                        android:fontFamily="@font/manrope_regular"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/white"
                         android:layout_marginStart="30dp"
-                        android:layout_marginTop="5dp" />
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/manrope_regular"
+                        android:text="Kathmandu, Nepal"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
 
                     <!-- Module -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="MODULE"
-                        android:fontFamily="@font/manrope_bold"
-                        android:textColor="@android:color/white"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
+                        android:layout_marginStart="30dp"
                         android:layout_marginTop="15dp"
-                        android:layout_marginStart="30dp" />
+                        android:fontFamily="@font/manrope_bold"
+                        android:text="MODULE"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
 
                     <!-- Mobile Development -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Mobile Application"
-                        android:fontFamily="@font/manrope_regular"
-                        android:textSize="16sp"
-                        android:textColor="@android:color/white"
                         android:layout_marginStart="30dp"
-                        android:layout_marginTop="5dp" />
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/manrope_regular"
+                        android:text="Mobile Application"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -187,6 +186,4 @@
 
         </androidx.cardview.widget.CardView>
 
-    </LinearLayout>
-
-</FrameLayout>
+    </androidx.appcompat.widget.LinearLayoutCompat>

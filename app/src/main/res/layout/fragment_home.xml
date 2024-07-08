@@ -18,8 +18,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bike Nepal"
-            android:fontFamily="@font/manrope_bold"
-            android:textSize="32sp"
+            android:fontFamily="@font/manrope_extrabold"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:gravity="center"
             android:layout_marginTop="30dp"
@@ -32,10 +32,10 @@
             android:layout_height="wrap_content"
             android:text="Hi! Welcome User."
             android:fontFamily="@font/manrope_semibold"
-            android:textSize="21sp"
+            android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="75dp"
             style="@style/TEXT"/>
 
 
@@ -60,7 +60,7 @@
             android:text="Learn About Bikes"
             android:fontFamily="@font/manrope_bold"
             android:textColor="@color/white"
-            android:textSize="32sp"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:layout_marginTop="450dp"/>
 
