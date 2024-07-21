@@ -30,7 +30,7 @@
         android:id="@+id/skip_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Skip"
+        android:text="@string/skip_button_txt"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:fontFamily="@font/manrope_semibold"
@@ -46,7 +46,7 @@
         android:id="@+id/next_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next"
+        android:text="@string/next_button_txt"
         android:textAllCaps="false"
         android:textSize="16sp"
         android:fontFamily="@font/manrope_semibold"
@@ -56,6 +56,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         style="@style/BUTTON" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

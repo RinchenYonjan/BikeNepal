@@ -24,12 +24,14 @@ import com.example.bikenepal.R;
 
 public class SettingFragment extends Fragment {
 
+
     private ImageView imageView;
     private static final String PREFS_NAME = "theme_prefs";
     private static final String KEY_THEME = "theme";
     private static final String KEY_NOTIFICATIONS_ENABLED = "notifications_enabled";
     private static final String FRAGMENT_TAG = "SettingFragment";
     private boolean isDefaultImage;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +44,7 @@ public class SettingFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
 
+        // Night and Light Mode
         SharedPreferences preferences = requireContext().getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         boolean isNightMode = preferences.getBoolean(KEY_THEME, false);
 
@@ -74,6 +77,7 @@ public class SettingFragment extends Fragment {
             }
         });
 
+
         // Notification
         LinearLayout NotificationButton = view.findViewById(R.id.layoutNotification);
         imageView = view.findViewById(R.id.imageNotification);
@@ -87,6 +91,7 @@ public class SettingFragment extends Fragment {
             }
         });
 
+
         // Change Language
         LinearLayout changelanguage = view.findViewById(R.id.layoutChangeLanguage);
         changelanguage.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +101,7 @@ public class SettingFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
 
         // Logout
         LinearLayout LogoutButton = view.findViewById(R.id.layoutLogout);
@@ -112,6 +118,7 @@ public class SettingFragment extends Fragment {
         return view;
     }
 
+
     // Method to update the notification button image
     private void updateNotificationButtonImage() {
         if (isDefaultImage) {
@@ -120,6 +127,7 @@ public class SettingFragment extends Fragment {
             imageView.setImageResource(R.drawable.notificationoff);
         }
     }
+
 
     // turnOffNotification Method
     private void turnOffNotifications() {
@@ -136,6 +144,7 @@ public class SettingFragment extends Fragment {
         }
     }
 
+
     // turnOnNotification Method
     private void turnOnNotifications() {
         // Show a toast for demonstration purposes.
@@ -146,6 +155,7 @@ public class SettingFragment extends Fragment {
 
         Toast.makeText(requireContext(), "Notifications turned on", Toast.LENGTH_SHORT).show();
     }
+
 
     // toggleNotifications Method
     private void toggleNotifications() {
@@ -160,4 +170,5 @@ public class SettingFragment extends Fragment {
         isDefaultImage = !notificationsEnabled;
         updateNotificationButtonImage();
     }
+
 }

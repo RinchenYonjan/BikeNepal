@@ -1,43 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- first LinearLayout -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.HomeFragment">
 
+    <!-- MyPortfolio.txt -->
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/manrope_extrabold"
+        android:text="@string/bike_nepal_h1"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <!-- Good morning text -->
+    <TextView
+        style="@style/TEXT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView2"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/manrope_semibold"
+        android:text="@string/hi_welcome_user"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <!-- RelativeLayout -->
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/custom_cardview">
 
-        <!-- MyPortfolio.txt -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bike Nepal"
-            android:fontFamily="@font/manrope_extrabold"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginStart="40dp"
-            style="@style/TEXT" />
-
-        <!-- Good morning text -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hi! Welcome User."
-            android:fontFamily="@font/manrope_semibold"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="75dp"
-            style="@style/TEXT"/>
-
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="0dp"
+            android:background="@drawable/custom_cardview"
+            app:cardBackgroundColor="@android:color/transparent">
 
         <!-- BackgroundImage -->
         <ImageView
@@ -47,36 +54,38 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
             android:scaleType="centerCrop"
-            android:layout_marginTop="120dp"
             android:background="@drawable/custom_describe_textview"
             app:srcCompat="@drawable/background"/>
-
 
         <!-- RinchenYonjan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Learn About Bikes"
+            android:text="@string/learn_about_bikes_h1"
             android:fontFamily="@font/manrope_bold"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold"
-            android:layout_marginTop="450dp"/>
-
+            android:gravity="center"
+            android:layout_gravity="center" />
 
         <!-- description text -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:text="Bike Nepal Mobile App show different company bike which are available in nepal dealership directly to user who want to see the details and information about bikes."
+            android:text="@string/bike_nepal_mobile_app_show_txt"
             android:fontFamily="@font/manrope_semibold"
             android:textColor="#f9f9f9"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:layout_marginTop="550dp"
-            android:gravity="center"/>
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginTop="80dp"/>
+
+        </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
-</LinearLayout>
+
+</RelativeLayout>

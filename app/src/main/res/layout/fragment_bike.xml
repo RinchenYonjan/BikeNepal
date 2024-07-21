@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/manrope_extrabold"
-        android:text="Latest Bike"
+        android:text="@string/latest_bike_h1"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/searchView"

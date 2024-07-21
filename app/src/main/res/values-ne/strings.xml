@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bike Nepal Mobile.app</string>
+    <string name="username">प्रयोगकर्ता नाम</string>
+    <string name="login_h1">लग - इन</string>
+    <string name="password">पासवर्ड</string>
+    <string name="login_txt">लग - इन</string>
+    <string name="register_h1">दर्ता गर्नुहोस्</string>
+    <string name="submit">पेश गर्नुहोस्</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="fragment1_string">यो मोबाइल एप्लिकेसनमा एपीआई सेवा प्लेटफर्मको रूपमा पोस्टम्यान समावेश हुन्छ जसले प्रयोगकर्ताको डाटा हाम्रो लोकलहोस्ट डाटाबेसमा दर्ता गर्न मद्दत गर्दछ।</string>
+    <string name="fragment2_string">यो मोबाइल अनुप्रयोगले हाम्रो अनुप्रयोग प्रयोगकर्तालाई सन्देश पठाउन मद्दत गर्ने सूचना क्लाउड सेवाको रूपमा फायरबेस समावेश गर्दछ।</string>
+    <string name="fragment3_string">यस मोबाइल अनुप्रयोगमा API बाट डाटा ल्याउन नेटवर्क अनुरोधहरू बनाउनको लागि रिट्रोफिट समावेश छ।</string>
+    <string name="title_activity_welcome">स्वागत छ</string>
+
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">अर्को</string>
+    <string name="previous">अघिल्लो</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails</string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="change_language_h1">भाषा परिवर्तन गर्नुहोस्</string>
+    <string name="nepali">नेपाली</string>
+    <string name="english">अंग्रेजी</string>
+    <string name="save">बचत गर्नुहोस्</string>
+    <string name="register_here_txt">अहिलेसम्म दर्ता गर्नुभएको छैन? यहाँ दर्ता गर्नुहोस्।</string>
+    <string name="next_button_txt">अर्को</string>
+    <string name="skip_button_txt">छोड्नुहोस्</string>
+    <string name="terms_and_conditions"><![CDATA[म नियम र सर्तहरू र गोपनीयता नीति स्वीकार गर्दछु।]]></string>
+    <string name="login_here_txt">पहिले नै खाता छ? यहाँ लगइन गर्नुहोस्।</string>
+    <string name="welcome_h1">स्वागत छ</string>
+    <string name="login_button_txt">लग - इन</string>
+    <string name="register_button_txt">दर्ता गर्नुहोस्</string>
+    <string name="latest_bike_h1">नवीनतम बाइक</string>
+    <string name="contact_h1">सम्पर्क गर्नुहोस्</string>
+    <string name="anything_to_know_about_bike">बाइक बारे जान्न को लागी केहि</string>
+    <string name="bike_company_txt">बाइक कम्पनी</string>
+    <string name="bike_country_txt">बाइक देश</string>
+    <string name="bike_name_txt">बाइकको नाम</string>
+    <string name="what_you_want_to_ask_txt">के सोध्न चाहनुहुन्छ ?</string>
+    <string name="send_button_txt">पठाउनुहोस्</string>
+    <string name="bike_nepal_h1">बाइक नेपाल</string>
+    <string name="hi_welcome_user">नमस्ते! स्वागत छ प्रयोगकर्ता.</string>
+    <string name="learn_about_bikes_h1">बाइक बारे जान्नुहोस्</string>
+    <string name="bike_nepal_mobile_app_show_txt">बाइक नेपाल मोबाइल एपले विभिन्न कम्पनीका बाइकहरू देखाउँछ जुन नेपाल डिलरशिपमा उपलब्ध छन् जुन प्रयोगकर्ताहरूलाई बाइकको विवरण र जानकारी हेर्न चाहने सिधै।</string>
+    <string name="profile_h1">प्रोफाइल</string>
+    <string name="our_personal_information_txt">हाम्रो व्यक्तिगत जानकारी जसले तपाईंलाई सान्दर्भिक जानकारी प्राप्त गर्न मद्दत गर्दछ।</string>
+    <string name="name">नाम</string>
+    <string name="setting_h1">सेटिङ</string>
+    <string name="notifications_txt">सूचनाहरू</string>
+    <string name="terms_and_conditions_txt">नियम र सर्तहरू</string>
+    <string name="email">इमेल</string>
+    <string name="phone_number">फोन नम्बर</string>
+    <string name="password_2">पासवर्ड</string>
+    <string name="night_mode_txt">नाइट मोड</string>
+    <string name="change_language_txt">भाषा परिवर्तन गर्नुहोस्</string>
+    <string name="security_measure_txt">सुरक्षा उपाय</string>
+    <string name="change_password_txt">पासवर्ड परिवर्तन गर्नुहोस्</string>
+    <string name="logout_txt">बाहिर निस्कनु</string>
+
+</resources>

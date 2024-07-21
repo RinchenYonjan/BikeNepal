@@ -19,7 +19,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="This mobile application consist of retrofit to make network requests to fetch data from APIs."
+        android:text="@string/fragment3_string"
         android:fontFamily="@font/manrope_regular"
         android:textSize="16sp"
         android:textColor="#FFFFFF"

@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/weblink"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".recyclerview.RecyclerViewHolder"
-    android:orientation="horizontal"
-    android:layout_marginTop="10dp"
     android:foreground="?attr/selectableItemBackground"
-    style="@style/SCREEN" >
+    style="@style/SCREEN">
+
+    <!-- Relative Layout -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp" >
 
     <!-- Space -->
     <LinearLayout
@@ -33,7 +38,7 @@
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="@string/name"
         android:textSize="20sp"
         android:fontFamily="@font/manrope_bold"
         android:layout_toEndOf="@+id/imageView"
@@ -67,6 +72,9 @@
         android:layout_below="@+id/imageView"
         android:layout_marginTop="5dp" />
 
+    </RelativeLayout>
+
 </RelativeLayout>
+
 
 

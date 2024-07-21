@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:fontFamily="@font/manrope_extrabold"
-        android:text="Profile"
+        android:text="@string/profile_h1"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -34,30 +34,31 @@
             android:src="@drawable/profileimage"
             app:shapeAppearance="@style/roundedImage" />
 
-        <!-- Heading H2 -->
+        <!-- TextView -->
         <TextView
             style="@style/TEXT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
             android:fontFamily="@font/manrope_regular"
-            android:text="Our personal information which helps you to get relevant information."
+            android:text="@string/our_personal_information_txt"
             android:textSize="16sp" />
 
         <!-- Card view -->
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            app:cardCornerRadius="25dp"
-            app:cardElevation="10dp">
+            app:cardCornerRadius="15dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true">
 
             <!-- ScrollView with LinearLayout inside -->
             <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:background="#1260cc">
+                android:background="#1260cc"
+                android:scrollbars="none" >
 
                 <LinearLayout
                     android:layout_width="match_parent"

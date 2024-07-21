@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
-            android:text="@string/login"
+            android:text="@string/login_h1"
             android:fontFamily="@font/manrope_bold"
             android:textColor="#ffffff"
             android:textSize="32sp"
@@ -83,7 +83,7 @@
             android:id="@+id/notRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Have not register yet? Register Here."
+            android:text="@string/register_here_txt"
             android:fontFamily="@font/manrope_regular"
             android:textColor="#ffffff"
             android:textSize="16sp" />

@@ -18,7 +18,6 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-
         // Initialize the TextView
         ImageView icon = findViewById(R.id.image_icon);
 
@@ -28,7 +27,6 @@ public class SplashActivity extends AppCompatActivity {
         fadeOut.setRepeatCount(ObjectAnimator.INFINITE);
         fadeOut.setRepeatMode(ObjectAnimator.REVERSE);
         fadeOut.start();
-
 
         // method post delayed
         new Handler().postDelayed(new Runnable() {
