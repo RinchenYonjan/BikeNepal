@@ -46,8 +46,7 @@
             android:textColorHint="#353535"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="25dp"
-            android:background="@drawable/custom_contact_editview"
-            style="@style/EDITTEXT" />
+            android:background="@drawable/custom_contact_editview" />
 
         <!-- Country Name -->
         <EditText
@@ -60,8 +59,7 @@
             android:textColorHint="#353535"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="10dp"
-            android:background="@drawable/custom_contact_editview"
-            style="@style/EDITTEXT" />
+            android:background="@drawable/custom_contact_editview" />
 
         <!-- Bike Name -->
         <EditText
@@ -74,8 +72,7 @@
             android:textColorHint="#353535"
             android:fontFamily="@font/manrope_regular"
             android:layout_margin="25dp"
-            android:background="@drawable/custom_contact_editview"
-            style="@style/EDITTEXT" />
+            android:background="@drawable/custom_contact_editview" />
 
         <!-- Description -->
         <EditText
@@ -89,8 +86,7 @@
             android:hint="@string/what_you_want_to_ask_txt"
             android:textSize="16sp"
             android:textColorHint="#353535"
-            android:fontFamily="@font/manrope_regular"
-            style="@style/EDITTEXT" />
+            android:fontFamily="@font/manrope_regular" />
 
         <!-- Send button -->
         <Button

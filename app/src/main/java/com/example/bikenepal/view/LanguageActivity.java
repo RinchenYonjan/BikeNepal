@@ -13,14 +13,21 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+
+import com.example.bikenepal.MainActivity;
 import com.example.bikenepal.R;
 import java.util.Locale;
 
 public class LanguageActivity extends AppCompatActivity {
 
+
     private static final String PREFS_NAME = "app_prefs";
     private static final String KEY_LANGUAGE = "language";
 
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,9 +56,19 @@ public class LanguageActivity extends AppCompatActivity {
         ImageButton backButton = findViewById(R.id.Back_Button);
         backButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                SettingFragment settingFragment = new SettingFragment();
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, settingFragment).commit();
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+                finish();
+
+//                // Create an instance of the fragment
+//                SettingFragment settingFragment = new SettingFragment();
+//
+//                // Use FragmentManager to add or replace the fragment
+//                FragmentManager fragmentManager = getSupportFragmentManager();
+//                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//                fragmentTransaction.add(R.id.fragment_container, settingFragment);
+//                fragmentTransaction.commit();
             }
         });
 
@@ -65,6 +82,7 @@ public class LanguageActivity extends AppCompatActivity {
         });
     }
 
+
     // restartActivity Method
     private void restartActivity() {
         Intent intent = new Intent(this, LanguageActivity.class);
@@ -72,7 +90,7 @@ public class LanguageActivity extends AppCompatActivity {
         finish();
     }
 
-    
+
     public static class LocaleHelper {
         public static void setLocale(Context context, String languageCode) {
             Locale locale = new Locale(languageCode);
@@ -90,6 +108,7 @@ public class LanguageActivity extends AppCompatActivity {
         }
     }
 
+
     public static class PreferenceManager {
         public static void saveLanguagePreference(Context context, String languageCode) {
             SharedPreferences prefs = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
@@ -103,4 +122,5 @@ public class LanguageActivity extends AppCompatActivity {
             return prefs.getString(KEY_LANGUAGE, "en");
         }
     }
+
 }

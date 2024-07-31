@@ -108,9 +108,8 @@ public class SettingFragment extends Fragment {
         LogoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (getActivity() != null) {
-                    getActivity().finish(); // Closing fragment
-                }
+
+                getActivity().finish(); // Closing fragment
                 Toast.makeText(requireContext().getApplicationContext(), "Logging out!", Toast.LENGTH_LONG).show();
             }
         });

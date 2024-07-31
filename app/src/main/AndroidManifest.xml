@@ -2,11 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-
 
     <application
         android:allowBackup="true"
@@ -24,12 +22,18 @@
         <activity
             android:name=".view.SplashActivity"
             android:exported="true">
+
+            <!-- This intent-filter marks the activity as the main entry point -->
             <intent-filter>
+                <!-- Indicates this activity should be the entry point -->
                 <action android:name="android.intent.action.MAIN" />
 
+                <!-- Indicates this activity should appear in the app launcher -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+
         <activity
             android:name=".view.WelcomeActivity"
             android:exported="false" />
@@ -46,9 +50,6 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".view.SettingFragment"
-            android:exported="false" />
-        <activity
             android:name=".view.LanguageActivity"
             android:exported="false" />
 
@@ -60,11 +61,9 @@
             </intent-filter>
         </service>
 
-
         <meta-data
             android:name="com.google.firebase.messaging."
             android:value="notification" />
-
 
     </application>
 

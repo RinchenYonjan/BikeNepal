@@ -8,7 +8,7 @@
 
     <!-- MyPortfolio.txt -->
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/BikeNepal_textview"
         style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,10 +21,11 @@
 
     <!-- Good morning text -->
     <TextView
+        android:id="@+id/WelcomeUser_textview"
         style="@style/TEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/BikeNepal_textview"
         android:layout_marginStart="40dp"
         android:layout_marginTop="15dp"
         android:fontFamily="@font/manrope_semibold"
